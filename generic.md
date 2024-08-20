@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Go
-description: 
+description: Matthew 28:18-20
 image: assets/images/pic01.jpg
 nav-menu: true
 ---
