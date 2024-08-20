@@ -8,4 +8,4 @@ author: null
 show_tile: false
 ---
 
-Frontier Nations is a coalition of churches, individuals, and organizations united in their mission to make disciples of nations within the 10/40 Window.
+Frontier Nations is a coalition of churches, individuals and organizations united in their mission to make disciples of nations within the 10/40 Window.
