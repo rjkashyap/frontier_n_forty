@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Get Equipped
+description: Hebrews 13:20–21
 image: assets/images/pic11.jpg
 nav-menu: true
 ---
