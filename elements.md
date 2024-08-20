@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Go
-image: assets/images/pic01.jpg
+title: Get Equipped
+image: assets/images/pic11.jpg
 nav-menu: true
 ---
 
@@ -12,7 +12,7 @@ nav-menu: true
 <section id="one">
 	<div class="inner">
 		<header class="major">
-			<h1>Go</h1>
+			<h1>Get Equipped</h1>
 		</header>
 
 <!-- Content -->
