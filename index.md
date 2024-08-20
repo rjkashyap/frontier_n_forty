@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-landing-title: 'Your Macedonian Call'
+landing-title: 'Frontier Nations'
 description: null
 image: null
 author: null
