@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Go
-description: Lorem ipsum dolor est
+description: 
 image: assets/images/pic01.jpg
 nav-menu: true
 ---
