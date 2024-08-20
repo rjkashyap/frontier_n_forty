@@ -1,8 +1,8 @@
 # site settings
-title: Frontier Nations
+title: Your Macedonian Call
 subtitle: 
 email: youremailaddress@gmail.com
-description: YOUR MACEDONIAN CALL
+description: 
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author:
