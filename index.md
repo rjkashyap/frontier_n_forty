@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Home
-landing-title: 'Hi, my name is Forty'
+title: Frontier Nations
+landing-title: 'Frontier Nations'
 description: null
 image: null
 author: null
