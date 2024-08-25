@@ -13,7 +13,7 @@ nav-menu: true
 <section id="one">
 	<div class="inner">
 		<header class="major">
-			<h1>Get Equipped</h1>
+			<h1>Global Mission School - Auckland, New Zealand</h1>
 		</header>
 
 <script type="text/javascript" src="https://form.jotform.com/jsform/242353402799865"></script>
