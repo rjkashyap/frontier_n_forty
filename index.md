@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-landing-title: 'FRONTIER NATIONS<br> <h2>your macedonian call</h2>'
+landing-title: 'FRONTIER NATIONS<br>your macedonian call'
 description: null
 image: null
 author: null
