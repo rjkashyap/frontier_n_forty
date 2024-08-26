@@ -6,12 +6,12 @@ description: '<h2>Your Macedonian Call</h2>'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author:
-street_address: 39 Roberton Rd, Avondale
-city: Auckland
+street_address: 
+city: 
 state: 
-zip_code: 1026
-country: New Zealand
-phone: (022) 699-8858
+zip_code: 
+country: 
+phone: 
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
