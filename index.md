@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-landing-title: <img src="{% link assets/images/pic09.jpg %}" alt="" />
+landing-title: 'FRONTIER NATIONS<br>your macedonian call'
 description: null
 image: null
 author: null
