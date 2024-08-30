@@ -13,7 +13,7 @@ nav-menu: true
                 <header class="major">
                     <h2>Short Term Trips </h2>
                 </header>
-                <p><span class="image left"><img src="{% link assets/images/gms.jpg %}" alt="" /></span><p><strong>Short-Term Field Opportunities</strong></p>
+                <span class="image fit"><img src="{% link assets/images/pic03.jpg %}" alt="" /></span>
 <p><strong>&ldquo;For this is what the Lord has commanded us: &lsquo;I have made you a light for the Gentiles, that you may bring salvation to the ends of the earth.'&rdquo;</strong> (Acts 13:47)</p>
 <p>The call to spread the gospel is a mission for all believers, and short-term field opportunities provide a powerful way to engage in this work. These opportunities are designed for those who wish to make an immediate impact by serving in unreached nations within the 10/40 Window.</p>
 <p><strong>What to Expect:</strong></p>
