@@ -28,9 +28,9 @@ nav-menu: true
 				-->
 				
 				<header class="major">
-                    <h2>Short Term Trips </h2>
+                    <h2>Long Term Mission</h2>
                 </header>
-                <span class="image fit"><img src="{% link assets/images/pic03.jpg %}" alt="" /></span>
+                <span class="image fit"><img src="{% link assets/images/pic100.jpg %}" alt="" /></span>
                
 <p><strong>Long-Term Field Opportunities</strong></p>
 <p><strong>"And on this rock I will build my church, and the gates of hell shall not prevail against it."&nbsp; </strong>Matthew 16:18</p>
