@@ -1,6 +1,6 @@
 # site settings
-title: <h2>Frontier Nations</h2> <br> Your Macedonian Call
-subtitle: 
+title: Frontier Nations
+subtitle: Your Macedonian Call
 email: frontier1040@proton.me
 description: '<p><h2>Your Macedonian Call</h2></p> <br> <p>test test</p>'
 baseurl: "/" # the subpath of your site, e.g. /blog
