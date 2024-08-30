@@ -17,11 +17,11 @@ nav-menu: true
 <p><strong>&ldquo;For this is what the Lord has commanded us: &lsquo;I have made you a light for the Gentiles, that you may bring salvation to the ends of the earth.'&rdquo;</strong> (Acts 13:47)</p>
 <p>The call to spread the gospel is a mission for all believers, and short-term field opportunities provide a powerful way to engage in this work. These opportunities are designed for those who wish to make an immediate impact by serving in unreached nations within the 10/40 Window.</p>
 <p><strong>What to Expect:</strong></p>
-<ul>
-<li><strong>Duration:</strong> Typically 2-3 weeks.</li>
-<li><strong>Activities:</strong> Share the gospel following Jesus&rsquo; instructions from Luke chapter 10, learn the local language and culture, and build relationships with the people you serve.</li>
-<li><strong>When:</strong> Every summer and winter.</li>
-</ul>
+
+<strong>Duration:</strong> Typically 2-3 weeks.
+<strong>Activities:</strong> Share the gospel following Jesus&rsquo; instructions from Luke chapter 10, learn the local language and culture, and build relationships with the people you serve.
+<strong>When:</strong> Every summer and winter.
+
 <p>You do your part in fulfilling the Great Commission by bringing the message of Jesus Christ to people who have never heard before. This experience offers a unique opportunity to see God's work in action and deepen your understanding of His mission. You do this trip in partnership with long term missionaries who receive you, briefly equip you and then send you under their prayer covering. This way, people who hear the gospel through you have the opportunity to be discipled even after you have left the field.</p></p>
 				<!-- 
                 <ul class="actions">
