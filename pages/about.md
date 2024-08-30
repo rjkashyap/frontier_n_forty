@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Go
+title: About Us
 description: Matthew 28:18-20
 image: assets/images/pic01.jpg
 nav-menu: true
