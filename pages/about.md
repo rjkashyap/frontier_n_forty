@@ -14,6 +14,9 @@ show_tile: false
                 <header class="major">
                     <h2>About Us </h2>
                 </header>
+				
+				 <span class="image fit"><img src="{% link assets/images/pic100.jpg %}" alt="" /></span>
+				 
 				<p>Frontier Nations is a missions coalition made up of churches, individuals and mission organizations united by the common goal of making disciples of nations within the 10/40 Window, where 96% of all unreached people of the world reside. We concentrate our efforts on this region, partnering with the global church to bring the good news to those who have never heard it.</p>
 <p><h4>What Drives Us</h4></p>
 <p>Jesus commanded, "Go therefore and make disciples of all nations" (Matthew 28:19). The term &ldquo;nations&rdquo; in this verse is translated from the Greek word &ldquo;ethne&rdquo;, which is more accurately rendered as &ldquo;peoples&rdquo; or &ldquo;people groups.&rdquo; There are over 6,000 unreached people groups globally, comprising one-third of the world&rsquo;s population, who have little to no access to the message of Jesus.</p>
