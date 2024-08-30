@@ -13,7 +13,17 @@ nav-menu: true
                 <header class="major">
                     <h2>Short Term Mission </h2>
                 </header>
-                <p><span class="image left"><img src="{% link assets/images/gms.jpg %}" alt="" /></span>Global Mission School is a seven-week (25 hours) training designed to awaken you to God's big-picture purpose, His deep love for all nations, and His desire to use His people to be a blessing on this earth. Through weekly lectures, you will learn how God has been advancing His kingdom throughout history. You will be inspired and challenged to actively engage in God's mission of bringing all nations back to Him. These seven weeks will transform your worldview, helping you recognize that you have been blessed to be a blessing to all nations.</p>
+                <p><span class="image left"><img src="{% link assets/images/gms.jpg %}" alt="" /></span><p><strong>Short-Term Field Opportunities</strong></p>
+<p><strong>&ldquo;For this is what the Lord has commanded us: &lsquo;I have made you a light for the Gentiles, that you may bring salvation to the ends of the earth.'&rdquo;</strong> (Acts 13:47)</p>
+<p>The call to spread the gospel is a mission for all believers, and short-term field opportunities provide a powerful way to engage in this work. These opportunities are designed for those who wish to make an immediate impact by serving in unreached nations within the 10/40 Window.</p>
+<p><strong>What to Expect:</strong></p>
+<ul>
+<li><strong>Duration:</strong> Typically 2-3 weeks.</li>
+<li><strong>Activities:</strong> Share the gospel following Jesus&rsquo; instructions from Luke chapter 10, learn the local language and culture, and build relationships with the people you serve.</li>
+<li><strong>When:</strong> Every summer and winter.</li>
+</ul>
+<p>You do your part in fulfilling the Great Commission by bringing the message of Jesus Christ to people who have never heard before. This experience offers a unique opportunity to see God's work in action and deepen your understanding of His mission. You do this trip in partnership with long term missionaries who receive you, briefly equip you and then send you under their prayer covering. This way, people who hear the gospel through you have the opportunity to be discipled even after you have left the field.</p></p>
+				
                 <ul class="actions">
                     <li><a href="/pages/gms.html" class="button next">Register</a></li>
                 </ul>
