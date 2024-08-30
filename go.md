@@ -11,7 +11,7 @@ nav-menu: true
         <section id="ten">
             <div class="inner">
                 <header class="major">
-                    <h2>Short Term Mission </h2>
+                    <h2>Short Term Trips </h2>
                 </header>
                 <p><span class="image left"><img src="{% link assets/images/gms.jpg %}" alt="" /></span><p><strong>Short-Term Field Opportunities</strong></p>
 <p><strong>&ldquo;For this is what the Lord has commanded us: &lsquo;I have made you a light for the Gentiles, that you may bring salvation to the ends of the earth.'&rdquo;</strong> (Acts 13:47)</p>
@@ -23,10 +23,11 @@ nav-menu: true
 <li><strong>When:</strong> Every summer and winter.</li>
 </ul>
 <p>You do your part in fulfilling the Great Commission by bringing the message of Jesus Christ to people who have never heard before. This experience offers a unique opportunity to see God's work in action and deepen your understanding of His mission. You do this trip in partnership with long term missionaries who receive you, briefly equip you and then send you under their prayer covering. This way, people who hear the gospel through you have the opportunity to be discipled even after you have left the field.</p></p>
-				
+				<!-- 
                 <ul class="actions">
                     <li><a href="/pages/gms.html" class="button next">Register</a></li>
                 </ul>
+				-->
             </div>
         </section>
 
