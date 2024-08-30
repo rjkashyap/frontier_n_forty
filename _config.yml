@@ -2,7 +2,7 @@
 title: Frontier Nations
 subtitle: 
 email: frontier1040@proton.me
-description: '<h2>Your Macedonian Call</h2> <br> <br> text text'
+description: '<p><h2>Your Macedonian Call</h2></p> <p>test test</p>'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author:
