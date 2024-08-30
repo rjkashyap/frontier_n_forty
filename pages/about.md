@@ -12,7 +12,7 @@ show_tile: false
         <section id="ten">
             <div class="inner">
                 <header class="major">
-                    <h2>Short Term Mission </h2>
+                    <h2>About Us </h2>
                 </header>
 				<p>Frontier Nations is a missions coalition made up of churches, individuals and mission organizations united by the common goal of making disciples of nations within the 10/40 Window, where 96% of all unreached people of the world reside. We concentrate our efforts on this region, partnering with the global church to bring the good news to those who have never heard it.</p>
 <p><h4>What Drives Us</h4></p>
