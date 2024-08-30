@@ -15,7 +15,7 @@ show_tile: false
                     <h2>About Us </h2>
                 </header>
 				
-				 <span class="image fit"><img src="{% link assets/images/pic100.jpg %}" alt="" /></span>
+				 <span class="image fit"><img src="{% link assets/images/1040.jpg %}" alt="" /></span>
 				 
 				<p>Frontier Nations is a missions coalition made up of churches, individuals and mission organizations united by the common goal of making disciples of nations within the 10/40 Window, where 96% of all unreached people of the world reside. We concentrate our efforts on this region, partnering with the global church to bring the good news to those who have never heard it.</p>
 <p><h4>What Drives Us</h4></p>
