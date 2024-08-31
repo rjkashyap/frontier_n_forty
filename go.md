@@ -28,19 +28,26 @@ nav-menu: true
 				-->
 				
 				<header class="major">
-                    <h2>Long Term Mission</h2>
+                    <h2>Long Term Opportunities</h2>
                 </header>
                 <span class="image fit"><img src="{% link assets/images/pic100.jpg %}" alt="" /></span>
                
 <p><strong>Long-Term Field Opportunities</strong></p>
 <p><strong>"And on this rock I will build my church, and the gates of hell shall not prevail against it."&nbsp; </strong>Matthew 16:18</p>
-<p>Long-term field opportunities are for those committed to a more extended period of service, focusing on church planting and deep cultural engagement. These roles require significant preparation and dedication to serve in frontier areas within the 10/40 Window. This commitment allows missionaries to build deep relationships, understand local cultures, and address both spiritual and practical needs effectively. The true value of long-term missions lies in their ability to lay a strong foundation for churches that thrive and grow over generations. Yes, the cost is significant and the lasting impact on communities and the church makes this enduring commitment invaluable, embodying the patience and dedication necessary for true, transformative gospel work.</p>
+<p>Long-term field opportunities are for those committed to a more extended period of service, focusing on church planting and deep cultural engagement. This commitment allows missionaries to build deep relationships, understand local cultures, and address both spiritual and practical needs effectively. The true value of long-term missions lies in their ability to lay a strong foundation for churches that thrive and grow over generations. Yes, the cost is significant and the lasting impact on communities and the church makes this enduring commitment invaluable, embodying the patience and dedication necessary for true, transformative gospel work.</p>
 <p><strong>Preparation:</strong> The length and nature of your training will vary depending on your ministry vision for the nation. Sometimes a big part of the training can happen in the field under the supervision and apprenticeship of a long-term missionary team. We will make sure that a long term missionary is sent after being fully prepared for the challenges ahead.</p>
 				<!-- 
                 <ul class="actions">
                     <li><a href="/pages/gms.html" class="button next">Register</a></li>
                 </ul>
 				-->
+				<header class="major">
+                    <h2>Medium Term Opportunities</h2>
+                </header>
+				<p><span class="image left"><img src="{% link assets/images/gms.jpg %}" alt="" /></span>Global Mission School is a seven-week (25 hours) training designed to awaken you to God's big-picture purpose, His deep love for all nations, and His desire to use His people to be a blessing on this earth. Through weekly lectures, you will learn how God has been advancing His kingdom throughout history. You will be inspired and challenged to actively engage in God's mission of bringing all nations back to Him. These seven weeks will transform your worldview, helping you recognize that you have been blessed to be a blessing to all nations.</p>
+				<p>We also offer programs for people desiring to go to serve for between 3 months to 1 year, alongside established long-term teams.</p>
+<p>Medium-term missionaries serve as a vital link between short-term enthusiasm and long-term commitment, making substantial contributions to the overall mission while also growing personally and spiritually through their service.</p>
+<p>Medium-term missionaries can bring specific skills or expertise that may not be available locally. This could range from medical aid, teaching, construction, to IT support, enhancing the effectiveness of this existing mission work.</p>
             </div>
         </section>
 
