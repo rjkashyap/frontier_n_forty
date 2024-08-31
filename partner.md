@@ -12,7 +12,7 @@ nav-menu: true
                 <header class="major">
                     <h2>Partner With Us </h2>
                 </header>
-				
+				<span class="image fit"><img src="{% link assets/images/pic03.jpg %}" alt="" /></span>
 				<div class="row">
 	<div class="6u 12u$(small)">
 		<h3>Sem turpis amet semper</h3>
