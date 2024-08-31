@@ -11,11 +11,11 @@ show_tile: false
         <section id="ten">
             <div class="inner">
                 <header class="major">
-                    <h2>About Us </h2>
+                    <h2>Frontier Ventures</h2>
                 </header>
 				
-				 <span class="image fit"><img src="{% link assets/images/1040.jpg %}" alt="" /></span>
-				 <p><strong>Frontier Ventures</strong>&nbsp;</p>
+				 <span class="image fit"><img src="{% link assets/images/ventures.jpg %}" alt="" /></span>
+				 
 <p>Frontier Ventures is the Business missional arm of Frontier Nations. The purpose of Frontier Ventures is to empower and equip Christian entrepreneurs to make a positive spiritual and economic impact in areas lacking a Christian witness.</p>
 <p>&zwnj;</p>
 <p>Business As Mission is a re-emerging strategy that will be the prominent missional strategy over in the next 10 to 20 years. It is difficult to succinctly define due to its many forms but there are certain true characteristics that unite the strategy:</p>
