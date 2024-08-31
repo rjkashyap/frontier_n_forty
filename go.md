@@ -32,7 +32,6 @@ nav-menu: true
                 </header>
                 <span class="image fit"><img src="{% link assets/images/pic100.jpg %}" alt="" /></span>
                
-<p><strong>Long-Term Field Opportunities</strong></p>
 <p><strong>"And on this rock I will build my church, and the gates of hell shall not prevail against it."&nbsp; </strong>Matthew 16:18</p>
 <p>Long-term field opportunities are for those committed to a more extended period of service, focusing on church planting and deep cultural engagement. This commitment allows missionaries to build deep relationships, understand local cultures, and address both spiritual and practical needs effectively. The true value of long-term missions lies in their ability to lay a strong foundation for churches that thrive and grow over generations. Yes, the cost is significant and the lasting impact on communities and the church makes this enduring commitment invaluable, embodying the patience and dedication necessary for true, transformative gospel work.</p>
 <p><strong>Preparation:</strong> The length and nature of your training will vary depending on your ministry vision for the nation. Sometimes a big part of the training can happen in the field under the supervision and apprenticeship of a long-term missionary team. We will make sure that a long term missionary is sent after being fully prepared for the challenges ahead.</p>
