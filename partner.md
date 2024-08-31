@@ -1,6 +1,6 @@
 ---
 title: Partner
-layout: landing
+layout: page
 description: 'Philippians 1:3-5'
 image: assets/images/pic07.jpg
 nav-menu: true
