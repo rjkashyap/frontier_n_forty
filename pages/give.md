@@ -11,7 +11,7 @@ show_tile: false
         <section id="ten">
             <div class="inner">
                 <header class="major">
-                    <h2>About Us </h2>
+                    <h2>Give</h2>
                 </header>
 				
 				 <span class="image fit"><img src="{% link assets/images/invest.jpg %}" alt="" /></span>
