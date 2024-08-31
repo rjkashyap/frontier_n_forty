@@ -17,7 +17,7 @@ show_tile: false
 				 <span class="image fit"><img src="{% link assets/images/ventures.jpg %}" alt="" /></span>
 				 
 <p>Frontier Ventures is the Business missional arm of Frontier Nations. The purpose of Frontier Ventures is to empower and equip Christian entrepreneurs to make a positive spiritual and economic impact in areas lacking a Christian witness.</p>
-<p>&zwnj;</p>
+
 <p>Business As Mission is a re-emerging strategy that will be the prominent missional strategy over in the next 10 to 20 years. It is difficult to succinctly define due to its many forms but there are certain true characteristics that unite the strategy:</p>
 <p><strong><em>Business as Mission</em></strong>&nbsp;(BAM) is the intentional integration of cross-cultural business and ministry that:</p>
 <ul>
@@ -41,7 +41,6 @@ show_tile: false
 <li><strong>Security:</strong>&nbsp;the world understands money, the world respects jobs, and the majority of the world is poor and in search of jobs. When we do legitimate business, we make it very difficult on governments to kick us out. They allow us to operate because of the blessing we are to the community.</li>
 <li><strong>Biblically &amp; historically successful</strong>: We find BAM throughout the New Testament and it has been used throughout history in taking the Gospel to the least reached.</li>
 </ol>
-<p>&zwnj;</p>
 <p>Frontier Nations works with aspiring or entrenched entrepreneurs to build the following essential pieces of a BAM:</p>
 <ol>
 <li><strong>Strong Business Idea</strong>&nbsp;&ndash; a tested idea that has the potential for growth &amp; impact</li>
