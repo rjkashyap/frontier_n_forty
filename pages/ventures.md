@@ -41,7 +41,7 @@ show_tile: false
 <li><strong>Security:</strong>&nbsp;the world understands money, the world respects jobs, and the majority of the world is poor and in search of jobs. When we do legitimate business, we make it very difficult on governments to kick us out. They allow us to operate because of the blessing we are to the community.</li>
 <li><strong>Biblically &amp; historically successful</strong>: We find BAM throughout the New Testament and it has been used throughout history in taking the Gospel to the least reached.</li>
 </ol>
-<p>Frontier Nations works with aspiring or entrenched entrepreneurs to build the following essential pieces of a BAM:</p>
+<p>Frontier Nations works with aspiring or entrenched missional entrepreneurs to build the following essential pieces of a BAM:</p>
 <ol>
 <li><strong>Strong Business Idea</strong>&nbsp;&ndash; a tested idea that has the potential for growth &amp; impact</li>
 <li><strong>Accountability</strong>&nbsp;&ndash; oversight guided by one-on one mentorship with Frontier Nations business leaders</li>
