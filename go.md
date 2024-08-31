@@ -43,10 +43,10 @@ nav-menu: true
 				<header class="major">
                     <h2>Medium Term Opportunities</h2>
                 </header>
-				<p><span class="image left"><img src="{% link assets/images/gms.jpg %}" alt="" /></span>Global Mission School is a seven-week (25 hours) training designed to awaken you to God's big-picture purpose, His deep love for all nations, and His desire to use His people to be a blessing on this earth. Through weekly lectures, you will learn how God has been advancing His kingdom throughout history. You will be inspired and challenged to actively engage in God's mission of bringing all nations back to Him. These seven weeks will transform your worldview, helping you recognize that you have been blessed to be a blessing to all nations.</p>
-				<p>We also offer programs for people desiring to go to serve for between 3 months to 1 year, alongside established long-term teams.</p>
-<p>Medium-term missionaries serve as a vital link between short-term enthusiasm and long-term commitment, making substantial contributions to the overall mission while also growing personally and spiritually through their service.</p>
-<p>Medium-term missionaries can bring specific skills or expertise that may not be available locally. This could range from medical aid, teaching, construction, to IT support, enhancing the effectiveness of this existing mission work.</p>
+				<p><span class="image left"><img src="{% link assets/images/gms.jpg %}" alt="" /></span>We also offer programs for people desiring to go to serve for between 3 months to 1 year, alongside established long-term teams. <br>
+<br>Medium-term missionaries serve as a vital link between short-term enthusiasm and long-term commitment, making substantial contributions to the overall mission while also growing personally and spiritually through their service.
+<br>Medium-term missionaries can bring specific skills or expertise that may not be available locally. This could range from medical aid, teaching, construction, to IT support, enhancing the effectiveness of this existing mission work.</p>
+				
             </div>
         </section>
 
