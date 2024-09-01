@@ -15,7 +15,7 @@ show_tile: false
                     <h2>Become a Sending Church</h2>
                 </header>
 				
-				 <span class="image fit"><img src="{% link assets/images/send.jpg %}" alt="" /></span>
+				 <span class="image fit"><img src="{% link assets/images/give.jpg %}" alt="" /></span>
 				 
 <p>At the heart of global missions is the vision of becoming a "sending church." This is a church that intentionally equips and sends its members to take the gospel to the nations. What started as an unfamiliar concept has now become a widespread movement among churches. Today, many local congregations are embracing their role in God&rsquo;s mission by preparing and sending cross-cultural missionaries with purpose and intentionality.</p>
 <p><strong>Building a Missionary Identity</strong></p>
