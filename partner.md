@@ -14,15 +14,11 @@ nav-menu: true
                 </header>
 				<span class="image fit"><img src="{% link assets/images/partner.jpg %}" alt="" /></span>
 				<div class="row">
-	<div class="6u 12u$(small)">
-		<h3>Become a Sending Church</h3>
-		
-	<a href="#" class="button special fit">Send</a>
+	<div class="6u 12u$(small)">		
+	<a href="#" class="button special fit">Become a Sending Church</a>
 	</div>
 	<div class="6u$ 12u$(small)">
-		<h3>Give to Frontier Nations</h3>
-		
-	<a href="#" class="button fit">Give</a>
+	<a href="/pages/give.html" class="button fit">Give to Frontier Nations</a>
 	</div>
 				
 

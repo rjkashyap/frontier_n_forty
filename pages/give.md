@@ -3,7 +3,7 @@ title: Partner
 layout: page
 description: 'Philippians 1:3-5'
 image: assets/images/pic07.jpg
-nav-menu: false
+nav-menu: true
 show_tile: false
 ---
 <div id="main" class="alt">
