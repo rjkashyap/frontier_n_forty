@@ -1,5 +1,5 @@
 ---
-title: Partner
+title: Give
 layout: page
 description: 'Philippians 1:3-5'
 image: assets/images/pic07.jpg
