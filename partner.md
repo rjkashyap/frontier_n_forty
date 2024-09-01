@@ -17,13 +17,13 @@ nav-menu: true
 
 				
 	<div>
-	<div class="6u$ 12u$(small)">
+	<div>
 	<a href="/pages/give.html" class="button fit">Give to Frontier Nations</a>
 	</div>
-	<div class="6u 12u$(small)">		
+	<div>		
 	<a href="/pages/send.html" class="button special fit">Become a Sending Church</a>
 	</div>
-    <div class="6u$ 12u$(small)">
+    <div>
 	<a href="/pages/ventures.html" class="button fit">Interested in Business as Mission&#63;</a>
 	</div>
 		
