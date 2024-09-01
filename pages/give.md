@@ -3,7 +3,7 @@ title: Give
 layout: page
 description: 'Philippians 1:3-5'
 image: assets/images/pic07.jpg
-nav-menu: true
+nav-menu: false
 show_tile: false
 ---
 <div id="main" class="alt">
