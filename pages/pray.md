@@ -21,5 +21,6 @@ show_tile: false
 
             </div>
         </section>
-</center>
+
 </div>
+</center>
