@@ -25,7 +25,7 @@ show_tile: false
 <p><strong>Planning Your Mission Journey</strong></p>
 <p>Before diving into missions, it&rsquo;s crucial to lay a solid foundation. Understanding who you are as a church, what your mission convictions are, and what unique gifts your congregation offers will guide your approach. Whether you&rsquo;re starting from scratch or building on an existing program, thoughtful planning will set the stage for a fruitful missions journey. Appoint a dedicated missions leader, stay open to learning from others, and carefully consider how your church can best contribute to the global mission.</p>
 <p><strong>Frontier Nations&nbsp;Are Here to Help</strong></p>
-<p>We would love to hourney alongside your church as you take&nbsp;your first step towards achieving this goal. Contact us either through the form below or email us at <a href="mailto:contact@frontiernations.org" target="_blank">contact@frontiernations.org</a>.</p>
+<p>We would love to journey alongside your church as you take&nbsp;your first step towards achieving this goal. Contact us either through the form below or email us at <a href="mailto:contact@frontiernations.org" target="_blank">contact@frontiernations.org</a>.</p>
             </div>
         </section>
 
