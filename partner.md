@@ -20,6 +20,12 @@ nav-menu: true
 	<div>
 	<a href="/pages/give.html" class="button fit">Give to Frontier Nations</a>
 	</div>
+	<div>
+	<a href="/pages/pray.html" class="button special fit">Pray for the Unreached</a>
+	</div>
+	<div>
+	<a href="/pages/enquiry.html" class="button fit">Host a Global Mission School</a>
+	</div>
 	<div>		
 	<a href="/pages/send.html" class="button special fit">Become a Sending Church</a>
 	</div>
