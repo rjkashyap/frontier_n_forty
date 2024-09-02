@@ -21,13 +21,13 @@ show_tile: false
 </center>
 <br>
 <p><strong>Five Steps to Pray for Unreached People Groups:</strong></p>
-<ul>
+<ol>
 <li>Ask the Lord of the Harvest to send more laborers to reach this specific people group.</li>
-<li>Pray that these workers will boldly proclaim the Gospel through&nbsp;in words.</li>
+<li>Pray that these workers will boldly proclaim the Gospel in words.</li>
 <li>Pray that the power and tangible love of God will be at display where the Gospel is preached; through acts of service, miracles, compassion, and other ways.</li>
 <li>Seek God's protection and strength for new believers as well as ministry workers as they face persecution.</li>
 <li>Pray that disciple-making and church planting efforts will grow and start to be led by local believers.</li>
-</ul>
+</ol>
             </div>
         </section>
 
