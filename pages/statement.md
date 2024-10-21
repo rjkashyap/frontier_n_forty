@@ -3,7 +3,7 @@ layout: page
 title: What We Believe
 description: 
 image: 
-nav-menu: false
+nav-menu: true
 show_tile: false
 ---
 
