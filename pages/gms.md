@@ -3,7 +3,7 @@ layout: page
 title: Global Mission School
 description: 
 image: 
-nav-menu: false
+nav-menu: true
 show_tile: false
 ---
 
