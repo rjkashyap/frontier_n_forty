@@ -21,11 +21,7 @@ show_tile: false
 
                 <p>You can make your donation through a bank transfer. Here are the details:</p>
 				<br>
-                <p>Account name:<strong>&nbsp;Frontier Nations</strong>
-                   Account number: <strong>03-1322-0357437-00</strong>
-                   Particulars: <em>Your Surname</em>
-                   Reference: <em>Donation</em>
-				</p>				
+               <p>Account name:<strong>&nbsp;Frontier Nations</strong><br>Account number: <strong>03-1322-0357437-00</strong><br>Particulars: <em>Your Surname</em><br>Reference: <em>Donation</em></p>				
 				<br>
                 <p>If you would like to receive a receipt for your tax credit, please request for it through the contact form below or via email &#40; <a href="mailto:contact@frontiernations.org" target="_blank">contact@frontiernations.org</a> &#41; to ask us how you can make a recurring donation to the Frontier Missions Fund.</p>
             </div>
