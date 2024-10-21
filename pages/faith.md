@@ -1,9 +1,9 @@
 ---
 layout: page
 title: What We Believe
-description: Matthew 28:18-20
-image: assets/images/pic01.jpg
-nav-menu: false
+description: 
+image: 
+nav-menu: true
 show_tile: false
 ---
 
@@ -31,7 +31,6 @@ show_tile: false
 <p><strong>Family, Fellowship, and Community Life</strong> - We believe that Christian marriage has been created by God to join one man and one woman in a lifelong, exclusive relationship of mutual care, support, and intimacy. Marriage creates the family unit within which children (or a child) are born or adopted, and nurtured. God has created the husband&rsquo;s and wife&rsquo;s roles in marriage on the model of the relationship between Christ and His church. We believe that fidelity in marriage and chastity in singleness are the only proper expressions of God&rsquo;s plan for human sexuality. We further believe that unrepentant and active sinful behaviors including, but not limited to adultery, domestic and emotional violence, incest, pedophilia, as well as pornography and other forms of sexual perversion, are the result of mankind&rsquo;s fallen nature, and require repentance and mental, emotional, and spiritual recovery and wholeness offered by the healing hand of Jesus. We believe that Jesus Christ offers acceptance and healing by repentance through the Holy Spirit to persons entrapped in sexual sin, breaking its power in them and freeing them to know and experience their true identity and freedom in Christ. <br />(Lev. 18:22; Lev. 20:10; Deut. 27:20-23; Prov. 6:32; 1 Cor. 9-10, 18-20; 2 Cor. 12:21; Gal. 5:19; Eph. 5:3; Col. 3:5; Thes. 4:3; Heb. 13:4; 1Tim. 1:10; James 5:16; Matt. 5:28; Rom. 1:24)</p>
 <p>We believe that God offers redemption and restoration to all who confess and repent of their sin, seeking His mercy and forgiveness through Jesus Christ.</p>
 <p>We believe that every person must be afforded compassion, love, kindness, respect, and dignity. Hateful and harassing behavior or attitudes directed toward any individual are to be repudiated and are not in accord with scripture nor the doctrines of the church.</p>
-<p>The intent of this statement is to set a general standard, not to deal with all possible exceptions, which might arise. Spiritual discernment along with sound biblical judgment will be needed to address unanticipated situations.</p>
 <p>&nbsp;</p>
 
             </div>
