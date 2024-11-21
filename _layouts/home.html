@@ -11,7 +11,7 @@
 <body>
 
     {% include header.html %}
-<!-- 
+
 <section id="three">
             <div class="inner">
                 <header class="major">
@@ -20,33 +20,38 @@
                 <div>
 <div class="row">
 	<div class="6u 12u$(small)">
-    <span class="image fit"><img src="{% link assets/images/go.png %}" alt="" /></span>
+    <span class="image fit"><img src="{% link assets/images/google.png %}" alt="" /></span>
 	</div>
 	</div>
-	<div class="row">
-		<div class="6u$ 12u$(small)">
-	<ul class="actions">
-    <li><a href="#one" class="button next">Register</a></li>
-    </ul>
-	</div>
-				
-				
-				
-				                
-				</div>
+
 				<div>
 <p><strong>Join Us for Two Transformative Weekends of Mission and Ministry</strong></p>
 <p>Are you ready to deepen your understanding of global missions and how you can live a life driven by it? At the &#34;GO&#34; Mission Weekend, &#40;1 &amp; 2 November&#41;, we invite you to embark on a journey that will challenge, inspire, and equip you for the Great Commission.</p>
 <p>During this event, led by <strong>David Riddell</strong>, a leading voice in ministry and counselling, we will focus on the topic of "<strong>Sustainable Mission</strong>". You'll gain practical tools to ensure your mission impacts lives today and lasts for generations. Topics include balancing personal life and ministry, mental health, relationships, and finances.</p>
 <p>Whether you're new to missions or seeking deeper wisdom to continue your work, this weekend will leave you spiritually enriched, practically equipped, and ready to take your place in God&rsquo;s unfolding plan for the nations.</p>
 </div>
+<div>
+<form method="post" action="/partner.html">
+  <label>Your Email Address</label>
+  <input type="text" name="email">
+<p> </p>
+  <label>Name</label>
+  <input type="text" name="name">
+<p> </p>
+  <label>Message</label>
+  <textarea name="message"></textarea>
 
-				                <ul class="actions">
-                    <li><a href="#one" class="button next">Register</a></li>
-                </ul>
+
+
+  <input type="hidden" name="inbox_key" value="frontier-nations-contact">
+  <input type="text" name="_gotcha" style="display: none;">
+<p> </p>
+  <input type="submit" value="Send Message">
+</form>
+</div>
             </div>
         </section>
--->
+
     <!-- Banner 
     <section id="banner" class="major">
         <div class="inner">
@@ -65,12 +70,7 @@
     </section>
 	-->
 	
-	<section id="one">
-	<div class="inner">
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdLzp669Ecyxf9045mFNyFqtOV5EOmOARK_JXuZmo2_-pto0g/viewform?embedded=true" width="640" height="1413" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
-    </section>
 	
         
 
@@ -79,7 +79,7 @@
 
         <!-- One -->
         {% include tiles.html %}
-
+    <!-- 
 <section id="three">
             <div class="inner">
                 <header class="major">
@@ -91,7 +91,7 @@
                 </ul>
             </div>
         </section>
-
+-->
 
         <section id="two">
             <div class="inner">
