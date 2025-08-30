@@ -12,7 +12,7 @@ show_tile: false
         <section id="ten">
             <div class="inner">
                 <header class="major">
-                    <h2>NO PLACE LEFT</h2>
+                    <h2>NO PLACE LEFT - Movement Leadership Training</h2>
                 </header>
 				
 				 <span class="image fit"><img src="{% link assets/images/1.png %}" alt="" /></span>
