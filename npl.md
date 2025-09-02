@@ -24,7 +24,7 @@ show_tile: false
 				 <span class="image fit"><img src="{% link assets/images/4.png %}" alt="" /></span>
 				<br>
 				 
-				 <a href="https://forms.gle/1wHnU7QU8PLtbMnE6" class="button  fit">REGISTER</a>
+				 <a href="https://forms.gle/QAX3G4rQeGJroQtb7" class="button  fit">REGISTER</a>
 				 
 
             </div>
