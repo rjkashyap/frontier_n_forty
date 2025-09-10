@@ -21,7 +21,7 @@ show_tile: false
 				<br>
 				 <span class="image fit"><img src="{% link assets/images/3.png %}" alt="" /></span>
 				<br>
-				 <span class="image fit"><img src="{% link assets/images/4.png %}" alt="" /></span>
+				 <span class="image fit"><img src="{% link assets/images/4MLT.png %}" alt="" /></span>
 				<br>
 				 
 				 <a href="https://forms.gle/QAX3G4rQeGJroQtb7" class="button  fit">REGISTER</a>
