@@ -15,18 +15,28 @@ show_tile: false
                     <h2>NO PLACE LEFT - Multiplying Movements in New Zealand?</h2>
                 </header>
 				
-				    <div class="container">
-        <div class="row">
-            <div class="col-xl-6 col-lg-6 mb-40">
-			 <span class="image fit"><img src="{% link assets/images/0.png %}" alt="" /></span>
+				
+				<div class="row">
+	<div class="6u 12u$(small)">
+		<h3>Meet a Movements Catalyst</h3>
+					 <span class="image fit"><img src="{% link assets/images/0.png %}" alt="" /></span>
 			 <a href="https://collections.humanitix.com/catalyse" class="button  fit">REGISTER</a>
-            </div>
-			
-			
-			<div class="col-xl-6 col-lg-6 mb-40">
-				 <span class="image fit"><img src="{% link assets/images/1.png %}" alt="" /></span>
+	</div>
+	<div class="6u$ 12u$(small)">
+		<h3>Mission Week and Movement Leadership Training</h3>
+						 <span class="image fit"><img src="{% link assets/images/1.png %}" alt="" /></span>
 				 <a href="https://forms.gle/QAX3G4rQeGJroQtb7" class="button  fit">REGISTER</a>
-			</div>
+	</div>
+	
+	</div>
+				
+
+
+           
+			
+
+
+			
 			
         </div>
     </div>
