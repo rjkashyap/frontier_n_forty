@@ -28,16 +28,8 @@ show_tile: false
 				 <a href="https://forms.gle/QAX3G4rQeGJroQtb7" class="button  fit">REGISTER</a>
 	</div>
 	
-	</div>
-				
-
-
-           
-			
-
-
-			
-			
+	</div>   
+					
         </div>
     </div>
 				
