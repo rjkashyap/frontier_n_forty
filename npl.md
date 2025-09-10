@@ -31,8 +31,7 @@ show_tile: false
         </div>
     </div>
 				
-				 <span class="image fit"><img src="{% link assets/images/1.png %}" alt="" /></span>
-				<br> 
+
 				 <span class="image fit"><img src="{% link assets/images/2.png %}" alt="" /></span>
 				<br>
 				 <span class="image fit"><img src="{% link assets/images/3.png %}" alt="" /></span>
