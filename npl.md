@@ -19,7 +19,7 @@ show_tile: false
 				<div class="row">
 	<div class="6u 12u$(small)">
 		<h3>Meet a Movements Catalyst</h3>
-					 <span class="image fit"><img src="{% link assets/images/0.png %}" alt="" /></span>
+					 <span class="image fit"><img src="{% link assets/images/cities.png %}" alt="" /></span>
 			 <a href="https://collections.humanitix.com/catalyse" class="button  fit">REGISTER</a>
 	</div>
 	<div class="6u$ 12u$(small)">
