@@ -21,23 +21,50 @@
         <section id="ten">
             <div class="inner">
                 <header class="major">
-                    <h2>NO PLACE LEFT - Multiplying Movements in New Zealand?</h2>
+                    <h2>Multiplying Disciples Until There Is #NoPlaceLeft</h2>
                 </header>
 				
-				
-				<div class="row">
-	<div class="6u 12u$(small)">
-		<h3>Meet a Movements Catalyst</h3>
-					 <span class="image fit"><img src="{% link assets/images/cities.png %}" alt="" /></span>
-			 <a href="https://collections.humanitix.com/catalyse" class="button  fit">REGISTER</a>
-	</div>
-	<div class="6u$ 12u$(small)">
-		<h3>Mission Week and Movement Leadership Training</h3>
-						 <span class="image fit"><img src="{% link assets/images/akl.png %}" alt="" /></span>
-				 <a href="https://forms.gle/QAX3G4rQeGJroQtb7" class="button  fit">REGISTER</a>
-	</div>
-	
-	</div>   
+				<!-- Humanitix Inline Widget (responsive) -->
+<link rel="preload" as="script" href="https://events.humanitix.com/scripts/widgets/inline.js">
+<script src="https://events.humanitix.com/scripts/widgets/inline.js" type="module"></script>
+
+<style>
+  /* Wrapper controls max width and centering; tweak as you like */
+  .hx-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Make the iframe responsive */
+  .hx-iframe {
+    width: 100%;
+    border: 0;
+    /* Height scales with viewport but never too tiny or too tall */
+    height: clamp(700px, 80vh, 1200px);
+    /* Prevent layout shifts while Humanitix script hydrates */
+    display: block;
+  }
+
+  /* Optional: tighten height a bit on very small screens */
+  @media (max-width: 480px) {
+    .hx-iframe {
+      height: clamp(600px, 85vh, 1000px);
+    }
+  }
+</style>
+
+<div class="hx-wrap">
+  <!-- The script will auto-populate this iframe. Keep data-collection as provided. -->
+  <iframe
+    class="hx-iframe"
+    data-collection="allevents"
+    loading="lazy"
+    title="Upcoming Events"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
 					
         </div>
 
