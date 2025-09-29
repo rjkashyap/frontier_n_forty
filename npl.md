@@ -49,6 +49,53 @@ show_tile: false
 
 					
 					</div>   
+
+
+					<div class="row">
+
+
+
+							<!-- Responsive Notion embed -->
+<style>
+  .notion-embed-wrap {
+    position: relative;
+    width: 100%;
+    /* Use dynamic viewport height where supported */
+    height: 88dvh;
+    max-height: 1200px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  /* Fallback for browsers without dvh support */
+  @supports not (height: 1dvh) {
+    .notion-embed-wrap { height: 88vh; }
+  }
+
+  /* Tweak height on small screens */
+  @media (max-width: 640px) {
+    .notion-embed-wrap { height: 92dvh; }
+  }
+
+  .notion-embed-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
+
+<div class="notion-embed-wrap">
+  <iframe
+    src="https://www.notion.so/27df475963518088831bef7349fd1473?v=27df475963518024a024000c18ab06ed&source=copy_link"
+    title="Opportunities Board"
+    loading="lazy"
+    referrerpolicy="no-referrer"
+  ></iframe>
+</div>
+
+					
+					</div>   
 					
         	</div>
 
