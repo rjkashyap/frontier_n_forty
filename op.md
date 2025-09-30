@@ -58,7 +58,7 @@ show_tile: false
 						<div class="airtable-embed-wrap">
 						<iframe
 							class="airtable-embed"
-							src="https://airtable.com/embed/app4Leug1Bu4XL58D/shrCB6Vd9fbQWKbX7?viewControls=on"
+							src="https://airtable.com/embed/app4Leug1Bu4XL58D/shrCB6Vd9fbQWKbX7?viewControls=off"
 							title="Opportunities (Airtable)"
 							loading="lazy"
 							referrerpolicy="no-referrer"
