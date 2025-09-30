@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Movements
-description: Matthew 28:18-20
+title: Opportunities
+permalink: /opportunities/
 image: assets/images/pic01.jpg
 nav-menu: false
 show_tile: false
@@ -12,61 +12,42 @@ show_tile: false
         <section id="ten">
 			<div class="inner">
 					<header class="major">
-						<h2>NO PLACE LEFT - Overseas Mission Trips</h2>
+						<h2>Current Opportunities</h2>
 					</header>
 				
 				
 					<div class="row">
 
 
-											<span class="image fit"><img src="{% link assets/images/cities.png %}" alt="" /></span>
-									<a href="#tally-open=nr7QJL&tally-align-left=1&tally-overlay=1&tally-emoji-text=✈️&tally-emoji-animation=tada" class="button  fit">REGISTER</a>
 
+							<h2>Current Opportunities</h2>
+
+							<div class="opportunities-grid">
+							{% for opp in site.opportunities %}
+								{% if opp.publish %}
+								<div class="card">
+									<img src="{{ opp.image }}" alt="{{ opp.title }}">
+									<h3>{{ opp.title }}</h3>
+									<p><strong>{{ opp.category }}</strong> — {{ opp.location }}</p>
+									<p>{{ opp.start_date | date: "%b %d, %Y" }} → {{ opp.finish_date | date: "%b %d, %Y" }}</p>
+									<p>{{ opp.duration }}</p>
+									<div class="summary">
+									{{ opp.content | markdownify }}
+									</div>
+									<a
+									href="#tally-open={{ opp.tally_id }}&tally-align-left=1&tally-overlay=1&tally-emoji-text=✈️&tally-emoji-animation=tada"
+									class="button primary fit"
+									role="button"
+									>Apply Now</a>
+								</div>
+								{% endif %}
+							{% endfor %}
+							</div>
 					
 					</div>   
 
 
-					<div class="row">
 
-						<!-- Responsive Airtable embed -->
-						<style>
-						.airtable-embed-wrap {
-							position: relative;
-							width: 100%;
-							height: 88dvh;           /* fills most of the viewport */
-							max-height: 1200px;
-							border-radius: 12px;
-							overflow: hidden;
-							border: 1px solid #ccc;  /* moved border to wrapper */
-							background: transparent;
-						}
-						@supports not (height: 1dvh) {
-							.airtable-embed-wrap { height: 88vh; } /* fallback */
-						}
-						@media (max-width: 640px) {
-							.airtable-embed-wrap { height: 92dvh; } /* a bit taller on mobile */
-						}
-						.airtable-embed-wrap iframe {
-							position: absolute;
-							inset: 0;
-							width: 100%;
-							height: 100%;
-							border: 0;
-						}
-						</style>
-
-						<div class="airtable-embed-wrap">
-						<iframe
-							class="airtable-embed"
-							src="https://airtable.com/embed/app4Leug1Bu4XL58D/shrCB6Vd9fbQWKbX7?viewControls=on"
-							title="Opportunities (Airtable)"
-							loading="lazy"
-							referrerpolicy="no-referrer"
-						></iframe>
-						</div>
-
-					
-					</div>   
 					
         	</div>
 

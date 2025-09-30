@@ -2,16 +2,16 @@
 title: Frontier Nations
 subtitle:
 email: contact@frontiernations.org
-description: ' We empower Christians to spark church-planting movements within the 10/40 Window by leveraging strategic partnerships and targeted resources.'
+description: 'We empower Christians to spark church-planting movements within the 10/40 Window by leveraging strategic partnerships and targeted resources.'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author:
-street_address: 
-city: 
-state: 
-zip_code: 
-country: 
-phone: 
+street_address:
+city:
+state:
+zip_code:
+country:
+phone:
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
@@ -41,4 +41,9 @@ exclude:
 - "*.gemspec"
 - LICENSE.md
 - CONTRIBUTING.md
-- README.md 
+- README.md
+
+# collections
+collections:
+  opportunities:
+    output: true   # so each opportunity can have its own page if needed
