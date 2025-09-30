@@ -7,86 +7,96 @@ nav-menu: false
 show_tile: false
 ---
 
+<div id="main" class="alt">
 
-<h2>Current Opportunities</h2>
+        <section id="ten">
+            <div class="inner">
+					<header class="major">
+						<h2>NO PLACE LEFT - Multiplying Movements in New Zealand?</h2>
+					</header>
+				
+				
+					<div class="row">
+							<div class="6u 12u$(small)">
+								<h3>Meet a Movements Catalyst</h3>
+											<span class="image fit"><img src="{% link assets/images/cities.png %}" alt="" /></span>
+									<a href="https://collections.humanitix.com/allevents" class="button  fit">REGISTER</a>
+							</div>
 
-<!-- Card container -->
-<div id="cards" class="card-grid"></div>
+							<div class="6u$ 12u$(small)">
+								<h3>Mission Week and Movement Leadership Training</h3>
+												<span class="image fit"><img src="{% link assets/images/akl.png %}" alt="" /></span>
+										<a href="https://events.humanitix.com/npl" class="button  fit">REGISTER</a>
+							</div>
+					
+					</div>   
+					
+        	</div>
 
-<!-- PapaParse to read CSV -->
-<script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+			<br>
 
-<!-- Tally popup script -->
-<script async src="https://tally.so/widgets/embed.js"></script>
+			<div class="inner">
+					<header class="major">
+						<h2>NO PLACE LEFT - Overseas Mission Trips</h2>
+					</header>
+				
+				
+					<div class="row">
 
-<script>
-  // Replace with your published Google Sheet CSV link
-  const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSC4Ls6Bv9zrsIAcSczGHqXfG3fq4Wr4zFN0QBT106XM5-zAxSCvKbfSq9qtn9ENqJCmnO3OvdiMNIb/pub?gid=1421394344&single=true&output=csv";
 
-  Papa.parse(sheetUrl, {
-    download: true,
-    header: true,
-    complete: function(results) {
-      const container = document.getElementById("cards");
-      results.data.forEach(row => {
-        // Only show published opportunities
-        if(row.Title && row.Publish === "TRUE") {
-          container.innerHTML += `
-            <div class="card">
-              <img src="${row.Image}" alt="${row.Title}">
-              <h3>${row.Title}</h3>
-              <p><strong>${row.Category}</strong> — ${row.Location}</p>
-              <p>${row.Duration}</p>
-              <p>${row.StartDate} → ${row.FinishDate}</p>
-              <div class="summary">${row.Summary || ""}</div>
-              <a href="#tally-open=${row.TallyID}&tally-overlay=1"
-                 class="button fit"
-                 role="button">
-                 Apply Now
-              </a>
-            </div>
-          `;
-        }
-      });
-    }
-  });
-</script>
+											<span class="image fit"><img src="{% link assets/images/cities.png %}" alt="" /></span>
+									<a href="#tally-open=nr7QJL&tally-align-left=1&tally-overlay=1&tally-emoji-text=✈️&tally-emoji-animation=tada" class="button  fit">REGISTER</a>
 
-<style>
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-  .card {
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    padding: 1rem;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  }
-  .card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: .75rem;
-  }
-  .card h3 {
-    margin: .5rem 0;
-  }
-  .card .button {
-    display: inline-block;
-    margin-top: .75rem;
-    background: #0074d9;
-    color: #fff;
-    padding: .6rem 1.2rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  .card .button:hover {
-    background: #005fa3;
-  }
-</style>
+					
+					</div>   
+
+
+					<div class="row">
+
+
+
+						<!-- Responsive Airtable Embed -->
+						<style>
+						.airtable-embed-wrap {
+							position: relative;
+							width: 100%;
+							padding-top: 75%; /* aspect ratio – adjust as needed */
+							border: 1px solid #ccc;
+							border-radius: 8px;
+							overflow: hidden;
+						}
+						.airtable-embed-wrap iframe {
+							position: absolute;
+							top: 0; left: 0;
+							width: 100%;
+							height: 100%;
+							border: 0;
+							background: transparent;
+						}
+						</style>
+
+						<div class="airtable-embed-wrap">
+						<iframe 
+							class="airtable-embed"
+							src="https://airtable.com/embed/app4Leug1Bu4XL58D/shrCB6Vd9fbQWKbX7?viewControls=on"
+							frameborder="0"
+							loading="lazy"
+							referrerpolicy="no-referrer"
+							title="Airtable Opportunities"
+						></iframe>
+						</div>
+
+					
+					</div>   
+					
+        	</div>
+
+
+
+		 
+
+				
+
+        </section>
+
+</div>
