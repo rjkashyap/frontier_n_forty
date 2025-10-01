@@ -29,7 +29,7 @@ show_tile: false
               {% if opp.tally_id %}
                 <a href="#tally-open={{ opp.tally_id }}&tally-overlay=1">Apply Now</a>
               {% elsif opp.apply_now %}
-                <a href="{{ opp.apply_now }}" target="_blank" rel="noopener">Apply Now</a>
+                <a href="{{ opp.apply_now }}" target="_blank" rel="noopener" class="button  fit" >Apply Now</a>
               {% endif %}
 
             </div>
