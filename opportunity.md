@@ -126,6 +126,39 @@ show_tile: false
   }
 
   /* Buttons: use theme defaults (white buttons, square corners) via .button */
+
+/* Make the image link feel interactive */
+#opps .opp a.js-open-opp {
+  display: block;
+  position: relative;
+  outline: none;
+}
+
+#opps .opp a.js-open-opp img {
+  transition: transform .18s ease, filter .18s ease;
+}
+
+/* Hover/focus: slight lift + dim for contrast */
+#opps .opp a.js-open-opp:hover img,
+#opps .opp a.js-open-opp:focus img {
+  cursor: pointer;
+  transform: translateY(-2px);
+  filter: brightness(0.92);
+}
+
+/* Optional: add a faint overlay on hover/focus (no rounded corners) */
+#opps .opp a.js-open-opp::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0);
+  transition: background .18s ease;
+}
+#opps .opp a.js-open-opp:hover::after,
+#opps .opp a.js-open-opp:focus::after {
+  background: rgba(255,255,255,0.04);
+}
+
 </style>
 
 <!-- Tally popup script (only needed if using tally_id links) -->
