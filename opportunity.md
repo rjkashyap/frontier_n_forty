@@ -14,14 +14,39 @@ show_tile: false
 
       <!-- Category Filters -->
       <ul class="actions filters" id="opp-filters">
-        <li><a href="#" class="button special" data-filter="all">All</a></li>
-        <li><a href="#" class="button" data-filter="staff-role">Staff Role</a></li>
-        <li><a href="#" class="button" data-filter="mission-internship">Mission Internship</a></li>
-        <li><a href="#" class="button" data-filter="church-planting-residency">Church Planting Residency</a></li>
-        <li><a href="#" class="button" data-filter="short-term-trip">Short-term Trip</a></li>
-        <li><a href="#" class="button" data-filter="medium-term-placement">Medium-term Placement</a></li>
-        <li><a href="#" class="button" data-filter="long-term-placement">Long-term Placement</a></li>
+        <li><a href="#" class="button special"
+               data-filter="all"
+               data-desc="Browse all current opportunities across Frontier Nations. Use the filters to narrow by type.">All</a></li>
+
+        <li><a href="#" class="button"
+               data-filter="staff-role"
+               data-desc="Paid and volunteer staff positions that support the mission operationally and strategically.">Staff Role</a></li>
+
+        <li><a href="#" class="button"
+               data-filter="mission-internship"
+               data-desc="Short to medium-term internships with hands-on ministry, mentoring, and training.">Mission Internship</a></li>
+
+        <li><a href="#" class="button"
+               data-filter="church-planting-residency"
+               data-desc="Residency programs focused on apprenticing future planters in a local church context.">Church Planting Residency</a></li>
+
+        <li><a href="#" class="button"
+               data-filter="short-term-trip"
+               data-desc="1–4 week mission trips with team-based outreach, training, and cultural exposure.">Short-term Trip</a></li>
+
+        <li><a href="#" class="button"
+               data-filter="medium-term-placement"
+               data-desc="Placements of 3–12 months to serve with field teams and deepen cross-cultural experience.">Medium-term Placement</a></li>
+
+        <li><a href="#" class="button"
+               data-filter="long-term-placement"
+               data-desc="Multi-year missionary roles for those sensing a long-term call to cross-cultural ministry.">Long-term Placement</a></li>
       </ul>
+
+      <!-- Dynamic Category Description -->
+      <p id="opp-category-desc" class="category-desc">
+        Browse all current opportunities across Frontier Nations. Use the filters to narrow by type.
+      </p>
 
       <!-- Opportunities Grid -->
       <div id="opps">
@@ -121,10 +146,10 @@ show_tile: false
   #opps .opp.is-hidden {
     opacity: 0;
     transform: translateY(10px);
-    pointer-events: none; /* prevent hover/click during fade */
+    pointer-events: none;
   }
 
-  /* Image — square corners, natural aspect */
+  /* Image */
   #opps .opp img {
     width: 100%;
     height: auto;
@@ -155,9 +180,16 @@ show_tile: false
   }
 
   /* Filter toolbar spacing */
-  #opp-filters { margin: .25rem 0 1rem; }
+  #opp-filters { margin: .25rem 0 .5rem; }
   #opp-filters li { margin: 0.25rem 0.5rem 0.25rem 0; }
   #opp-filters .button { min-width: 10rem; text-align: center; }
+
+  /* Category description styling */
+  .category-desc {
+    margin: 0 0 1.25rem;
+    color: rgba(230,233,239,0.85);
+    line-height: 1.5;
+  }
 </style>
 
 <script>
@@ -167,16 +199,15 @@ show_tile: false
 
     const btns  = bar.querySelectorAll('[data-filter]');
     const cards = Array.from(document.querySelectorAll('#opps .opp'));
+    const descEl = document.getElementById('opp-category-desc');
 
-    const DURATION = 520; // ms — a touch slower on appearance
-    const STAGGER  = 75;  // ms per card for a softer cascade
+    const DURATION = 420; // ms
+    const STAGGER  = 55;  // ms
 
     function hideCard(card, i) {
       if (card.dataset.hidden === '1') return;
-      // stagger via transition-delay for smoother sequencing
       card.style.transitionDelay = (i * STAGGER) + 'ms';
-      card.classList.add('is-hidden');              // fade/slide out
-      // remove from layout after transition completes
+      card.classList.add('is-hidden');
       setTimeout(() => {
         card.style.display = 'none';
         card.dataset.hidden = '1';
@@ -186,12 +217,11 @@ show_tile: false
 
     function showCard(card, i) {
       if (card.dataset.hidden !== '1') return;
-      // ensure we start from hidden visual state, then animate in
-      card.classList.add('is-hidden');              // start hidden (opacity 0)
-      card.style.display = '';                      // put back into layout
-      void card.offsetWidth;                        // reflow so transition can run
+      card.classList.add('is-hidden');  // start hidden
+      card.style.display = '';
+      void card.offsetWidth;            // reflow for transition
       card.style.transitionDelay = (i * STAGGER) + 'ms';
-      card.classList.remove('is-hidden');           // animate to visible
+      card.classList.remove('is-hidden');
       setTimeout(() => {
         card.dataset.hidden = '0';
         card.style.transitionDelay = '0ms';
@@ -205,7 +235,6 @@ show_tile: false
         const cat = c.getAttribute('data-cat-slug');
         ((slug === 'all' || cat === slug) ? toShow : toHide).push(c);
       });
-      // hide first, then show (both with gentle stagger)
       toHide.forEach((c, i) => hideCard(c, i));
       toShow.forEach((c, i) => showCard(c, i));
     }
@@ -213,6 +242,9 @@ show_tile: false
     function setActive(targetBtn) {
       btns.forEach(b => b.classList.remove('special'));
       targetBtn.classList.add('special');
+      // Update description from the button's data-desc
+      const text = targetBtn.getAttribute('data-desc') || '';
+      if (descEl) descEl.textContent = text;
     }
 
     btns.forEach(btn => {
@@ -241,6 +273,7 @@ show_tile: false
       }
     });
 
+    // Set initial active button & description
     setActive(initBtn);
   })();
 </script>
