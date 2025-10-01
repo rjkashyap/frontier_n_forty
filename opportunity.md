@@ -228,6 +228,15 @@ show_tile: false
   margin: .25rem 0 .75rem;
 }
 
+/* Add spacing between filter buttons */
+#opp-filters li {
+  margin: 0.25rem 0.5rem 0.25rem 0; /* top/right/bottom/left */
+}
+#opp-filters .button {
+  min-width: 10rem;       /* makes them wider and consistent */
+  text-align: center;     /* centers text inside */
+}
+
 </style>
 
 <!-- Tally popup script (only needed if using tally_id links) -->
