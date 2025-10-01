@@ -79,12 +79,22 @@
 	@import 'layout/wrapper';
 	@import 'layout/menu';
 
-	/* Logo sizing */
+/* Logo sizing + padding */
+#header .logo {
+  display: inline-block;
+  padding: 6px 0;     /* top/bottom breathing room */
+  line-height: 0;     /* remove extra vertical space */
+}
+
 #header .logo img {
   display: block;
-  max-height: 36px; /* adjust 32–40px if needed */
-  width: auto;      /* keep aspect ratio */
+  max-height: 48px;   /* was 36px — bump up the size */
+  width: auto;        /* keep aspect ratio */
 }
-#header .logo {
-  line-height: 0;   /* remove extra vertical space */
+
+/* Optional: slightly smaller on narrow screens */
+@media (max-width: 768px) {
+  #header .logo img {
+    max-height: 42px;
+  }
 }
