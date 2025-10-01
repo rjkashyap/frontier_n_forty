@@ -10,6 +10,8 @@ tally_id: nr7QJL
 publish: true
 ---
 
+{% if page.image %}<img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" style="max-width:100%;height:auto;display:block;margin-bottom:1rem;border-radius:6px;">{% endif %}
+
 Come with us to Fiji to serve communities and share the gospel. This trip will include training, outreach, and fellowship.
 
 <a
