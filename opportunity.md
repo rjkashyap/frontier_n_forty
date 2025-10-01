@@ -45,24 +45,24 @@ show_tile: false
                 </p>
               {% endif %}
 
-				{% if opp.tally_id %}
-				<ul class="actions">
-					<li>
-					<a href="#tally-open={{ opp.tally_id }}&tally-overlay=1"
-						class="button special"
-						role="button">Apply Now</a>
-					</li>
-				</ul>
-				{% elsif opp.apply_now %}
-				<ul class="actions">
-					<li>
-					<a href="{{ opp.apply_now }}"
-						class="button"
-						target="_blank" rel="noopener"
-						role="button">Apply Now</a>
-					</li>
-				</ul>
-				{% endif %}
+              {% if opp.tally_id %}
+                <ul class="actions">
+                  <li>
+                    <a href="#tally-open={{ opp.tally_id }}&tally-overlay=1"
+                       class="button"
+                       role="button">Apply Now</a>
+                  </li>
+                </ul>
+              {% elsif opp.apply_now %}
+                <ul class="actions">
+                  <li>
+                    <a href="{{ opp.apply_now }}"
+                       class="button"
+                       target="_blank" rel="noopener"
+                       role="button">Apply Now</a>
+                  </li>
+                </ul>
+              {% endif %}
 
             </div>
           {% endif %}
@@ -74,23 +74,7 @@ show_tile: false
 </div>
 
 <style>
-  /* === Dark palette tokens === */
-  :root {
-    --bg:        #0f1115;
-    --bg-alt:    #161a22;
-    --fg:        #e6e9ef;
-    --fg-bold:   #ffffff;
-    --fg-light:  rgba(230,233,239,0.68);
-    --border:    rgba(230,233,239,0.10);
-    --border-bg: rgba(230,233,239,0.05);
-    --highlight: #7aa2ff;
-    --btn-bg:    var(--highlight);
-    --btn-fg:    var(--fg-bold);
-    --btn-bg-h:  #5f86ff;
-    --card-bg:   var(--bg-alt);
-    --card-fg:   var(--fg);
-  }
-
+  /* Grid */
   #opps {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -98,67 +82,48 @@ show_tile: false
     margin-top: 1rem;
   }
 
+  /* Card — square corners, theme-friendly */
   #opps .opp {
-    background: var(--card-bg);
-    color: var(--card-fg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    background: #161a22;              /* keep your dark card bg; adjust if needed */
+    color: #e6e9ef;
+    border: 1px solid rgba(230,233,239,0.10);
+    border-radius: 0;                  /* no rounded corners */
     padding: 1rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,.25), inset 0 0 0 1px var(--border-bg);
+    box-shadow: none;                  /* remove custom shadow to match theme */
   }
 
+  /* Image — square corners, natural aspect */
   #opps .opp img {
     width: 100%;
-    height: auto;        /* no crop, natural aspect ratio */
+    height: auto;
     display: block;
-    border-radius: 8px;
+    border-radius: 0;                  /* no rounded corners */
     margin-bottom: 0.5rem;
   }
 
+  /* Text */
   #opps .opp h3 {
     margin: 0.25rem 0 0.25rem;
     line-height: 1.25;
-    color: var(--fg-bold);
+    color: #ffffff;
   }
-
   #opps .opp .location {
     margin: 0 0 0.5rem;
-    color: var(--fg-light);
+    color: rgba(230,233,239,0.68);
     font-weight: 600;
   }
-
   #opps .opp .excerpt {
     margin: 0 0 0.5rem;
-    color: var(--fg-light);
+    color: rgba(230,233,239,0.68);
   }
-
   #opps .opp .meta {
     margin: 0 0 0.75rem;
-    color: var(--fg-light);
+    color: rgba(230,233,239,0.68);
     font-size: 0.95rem;
   }
 
-  .button {
-    display: inline-block;
-    padding: .65rem 1.1rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    text-align: center;
-    border: 1px solid var(--border);
-    transition: transform .04s ease, filter .12s ease, box-shadow .12s ease;
-  }
-  .button.primary {
-    background: var(--btn-bg);
-    color: var(--btn-fg);
-    box-shadow: 0 4px 12px rgba(122,162,255,0.28);
-  }
-  .button.primary:hover {
-    background: var(--btn-bg-h);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(122,162,255,0.38);
-  }
-  .button.fit { width: 100%; }
+  /* Buttons: use theme defaults (white light buttons) */
+  /* No custom .button styles here so the theme's square style takes over */
 </style>
 
 <!-- Tally popup script (needed if you use tally_id) -->
