@@ -52,7 +52,7 @@ show_tile: false
                 <ul class="actions">
                   <li>
                     <a href="#tally-open={{ opp.tally_id }}&tally-overlay=1"
-                       class="button"
+                       class="button special"
                        role="button">Apply Now</a>
                   </li>
                 </ul>
