@@ -168,8 +168,8 @@ show_tile: false
     const btns  = bar.querySelectorAll('[data-filter]');
     const cards = Array.from(document.querySelectorAll('#opps .opp'));
 
-    const DURATION = 420; // ms — a touch slower on appearance
-    const STAGGER  = 55;  // ms per card for a softer cascade
+    const DURATION = 520; // ms — a touch slower on appearance
+    const STAGGER  = 75;  // ms per card for a softer cascade
 
     function hideCard(card, i) {
       if (card.dataset.hidden === '1') return;
