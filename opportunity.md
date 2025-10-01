@@ -23,16 +23,21 @@ show_tile: false
 		<li><a href="#" class="button" data-filter="long-term-placement">Long-term Placement</a></li>
 		</ul>
 
-      <div id="opps">
-        {% for opp in site.opportunities %}
-          {% if opp.publish %}
-            {% assign blurb = opp.excerpt
-                              | default: opp.summary
-                              | default: opp.content
-                              | strip_html
-                              | truncate: 220 %}
+			{% for opp in site.opportunities %}
+			{% if opp.publish %}
+				{% assign blurb = opp.excerpt
+								| default: opp.summary
+								| default: opp.content
+								| strip_html
+								| truncate: 220 %}
 
-            <div class="opp">
+				{% assign cat_slug = opp.category | downcase
+				| replace: ' ', '-'
+				| replace: '&', 'and'
+				| replace: '/', '-'
+				| replace: '--', '-' %}
+
+				<div class="opp" data-cat-slug="{{ cat_slug }}">
 
 				{% if opp.drive_id %}
 				<img
@@ -238,6 +243,46 @@ show_tile: false
 }
 
 </style>
+
+<script>
+  (function () {
+    const bar   = document.getElementById('opp-filters');
+    if (!bar) return;
+
+    const btns  = bar.querySelectorAll('[data-filter]');
+    const cards = document.querySelectorAll('#opps .opp');
+
+    function applyFilter(slug) {
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-cat-slug');
+        card.style.display = (slug === 'all' || cat === slug) ? '' : 'none';
+      });
+    }
+
+    function setActive(targetBtn) {
+      btns.forEach(b => b.classList.remove('special')); // remove active styling
+      targetBtn.classList.add('special');               // theme’s highlighted look
+    }
+
+    // Click handling
+    btns.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const slug = this.getAttribute('data-filter');
+        applyFilter(slug);
+        setActive(this);
+        // Optional: keep state in URL hash
+        if (history && history.replaceState) history.replaceState(null, '', '#' + slug);
+      });
+    });
+
+    // Initial state from URL hash (e.g., /opportunity#short-term-trip)
+    const initialSlug = (location.hash || '#all').slice(1);
+    const initBtn = bar.querySelector(`[data-filter="${initialSlug}"]`) || btns[0];
+    setActive(initBtn);
+    applyFilter(initBtn.getAttribute('data-filter'));
+  })();
+</script>
 
 <!-- Tally popup script (only needed if using tally_id links) -->
 <script async src="https://tally.so/widgets/embed.js"></script>
