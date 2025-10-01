@@ -5,7 +5,7 @@ location: "Suva, Fiji"
 start_date: 2025-07-01
 finish_date: 2025-07-14
 duration: "2 weeks"
-image: "https://drive.google.com/file/d/1qeSug8EpSk6J4uW5hLOVpM_HP2Hp9K4p/view?usp=sharing"
+image: "https://drive.google.com/uc?id=1qeSug8EpSk6J4uW5hLOVpM_HP2Hp9K4p"
 tally_id: nr7QJL
 publish: true
 ---
