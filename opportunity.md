@@ -47,30 +47,6 @@ show_tile: false
 </div>
 
 <style>
-  /* === Your palette as CSS variables === */
-  :root {
-    --bg:        #0f1115;
-    --bg-alt:    #161a22;
-    --fg:        #e6e9ef;
-    --fg-bold:   #ffffff;
-    --fg-light:  rgba(230,233,239,0.68);
-    --border:    rgba(230,233,239,0.10);
-    --border-bg: rgba(230,233,239,0.05);
-    --highlight: #7aa2ff;  /* also accent1 */
-    --accent1:   #7aa2ff;
-    --accent2:   #a78bfa;
-    --accent3:   #fca5a5;
-    --accent4:   #f6d487;
-    --accent5:   #93c5fd;
-    --accent6:   #34d399;
-
-    /* Button tokens */
-    --btn-bg:    var(--highlight);
-    --btn-fg:    var(--fg-bold);
-    --btn-bg-h:  #5f86ff; /* hover tint close to highlight */
-    --btn-bdr:   var(--border);
-  }
-
   #opps .opp img {
     max-width: 100%;
     height: auto;
@@ -81,8 +57,7 @@ show_tile: false
   #opps .opp {
     margin-bottom: 2rem;
   }
-
-  /* Button styles (fallback if theme lacks .button classes) */
+  /* Safety styles in case your theme doesn't include .button classes */
   .button {
     display: inline-block;
     padding: .65rem 1.1rem;
@@ -90,19 +65,11 @@ show_tile: false
     text-decoration: none;
     font-weight: 600;
     text-align: center;
-    border: 1px solid var(--btn-bdr);
-    transition: transform .04s ease, filter .12s ease, box-shadow .12s ease;
   }
   .button.primary {
-    background: var(--btn-bg);
-    color: var(--btn-fg);
-    box-shadow: 0 4px 10px rgba(122,162,255,0.25);
+    background: #16a34a;
+    color: #fff;
   }
-  .button.primary:hover {
-    background: var(--btn-bg-h);
-    filter: brightness(1);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 14px rgba(122,162,255,0.32);
-  }
+  .button.primary:hover { filter: brightness(.95); }
   .button.fit { width: 100%; }
 </style>
