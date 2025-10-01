@@ -19,18 +19,31 @@ show_tile: false
           {% if opp.publish %}
             <div class="opp">
 
-				{% if opp.drive_id %}
-				<img
-					src="https://lh3.googleusercontent.com/d/{{ opp.drive_id }}=w1600"
-					data-drive-id="{{ opp.drive_id }}"
-					data-placeholder="{{ 'assets/images/opportunities/placeholder.png' | relative_url }}"
-					alt="{{ opp.title | escape }}"
-					onerror="driveImgFallback(this)"
-				>
-				{% endif %}
+              {% if opp.drive_id %}
+                <img
+                  src="https://lh3.googleusercontent.com/d/{{ opp.drive_id }}=w1600"
+                  alt="{{ opp.title | escape }}"
+                >
+              {% endif %}
 
               <h3>{{ opp.title }}</h3>
-              <p>{{ opp.excerpt }}</p>
+
+              {% if opp.location %}
+                <p class="location">📍 {{ opp.location }}</p>
+              {% endif %}
+
+              {% if opp.excerpt %}
+                <p class="excerpt">{{ opp.excerpt }}</p>
+              {% endif %}
+
+              {% assign has_dates = opp.start_date or opp.finish_date %}
+              {% if has_dates or opp.duration %}
+                <p class="meta">
+                  {% if opp.start_date %}{{ opp.start_date | date: "%b %d, %Y" }}{% endif %}
+                  {% if opp.finish_date %} → {{ opp.finish_date | date: "%b %d, %Y" }}{% endif %}
+                  {% if opp.duration %}{% if has_dates %} • {% endif %}{{ opp.duration }}{% endif %}
+                </p>
+              {% endif %}
 
               {% if opp.tally_id %}
                 <a href="#tally-open={{ opp.tally_id }}&tally-overlay=1"
@@ -52,8 +65,6 @@ show_tile: false
   </section>
 </div>
 
-
-
 <style>
   /* === Dark palette tokens === */
   :root {
@@ -64,23 +75,14 @@ show_tile: false
     --fg-light:  rgba(230,233,239,0.68);
     --border:    rgba(230,233,239,0.10);
     --border-bg: rgba(230,233,239,0.05);
-    --highlight: #7aa2ff;   /* accent1 */
-    --accent1:   #7aa2ff;
-    --accent2:   #a78bfa;
-    --accent3:   #fca5a5;
-    --accent4:   #f6d487;
-    --accent5:   #93c5fd;
-    --accent6:   #34d399;
-
-    /* Button tokens */
+    --highlight: #7aa2ff;
     --btn-bg:    var(--highlight);
     --btn-fg:    var(--fg-bold);
-    --btn-bg-h:  #5f86ff;   /* hover tint near highlight */
+    --btn-bg-h:  #5f86ff;
     --card-bg:   var(--bg-alt);
     --card-fg:   var(--fg);
   }
 
-  /* Make the list a responsive grid */
   #opps {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -88,7 +90,6 @@ show_tile: false
     margin-top: 1rem;
   }
 
-  /* Card */
   #opps .opp {
     background: var(--card-bg);
     color: var(--card-fg);
@@ -98,7 +99,6 @@ show_tile: false
     box-shadow: 0 2px 10px rgba(0,0,0,.25), inset 0 0 0 1px var(--border-bg);
   }
 
-  /* Card image */
   #opps .opp img {
     width: 100%;
     height: 180px;
@@ -108,18 +108,29 @@ show_tile: false
     margin-bottom: 0.5rem;
   }
 
-  /* Text */
   #opps .opp h3 {
-    margin: 0.25rem 0 0.35rem;
+    margin: 0.25rem 0 0.25rem;
     line-height: 1.25;
     color: var(--fg-bold);
   }
+
+  #opps .opp .location {
+    margin: 0 0 0.5rem;
+    color: var(--fg-light);
+    font-weight: 600;   /* a touch of emphasis */
+  }
+
   #opps .opp .excerpt {
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.5rem;
     color: var(--fg-light);
   }
 
-  /* Buttons */
+  #opps .opp .meta {
+    margin: 0 0 0.75rem;
+    color: var(--fg-light);
+    font-size: 0.95rem;
+  }
+
   .button {
     display: inline-block;
     padding: .65rem 1.1rem;
@@ -143,26 +154,5 @@ show_tile: false
   .button.fit { width: 100%; }
 </style>
 
-<script>
-  function driveHiRes(id){ return `https://lh3.googleusercontent.com/d/${id}=w1600`; }
-  function driveView(id){  return `https://drive.google.com/uc?export=view&id=${id}`; }
-  function driveThumb(id){ return `https://drive.google.com/thumbnail?id=${id}&sz=w1200`; }
-
-  function driveImgFallback(img){
-    const id = img.dataset.driveId;
-    const state = img.dataset.state || "hires";
-    if(!id) return;
-
-    if(state === "hires"){
-      img.dataset.state = "view";
-      img.src = driveView(id);
-    } else if(state === "view"){
-      img.dataset.state = "thumb";
-      img.src = driveThumb(id);
-    } else {
-      img.onerror = null; // stop loops
-      img.src = img.dataset.placeholder || "{{ '/images/opportunities/placeholder.jpg' | relative_url }}";
-    }
-  }
-</script>
-
+<!-- Tally popup script (needed if you use tally_id) -->
+<script async src="https://tally.so/widgets/embed.js"></script>
