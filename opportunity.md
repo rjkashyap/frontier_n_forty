@@ -12,6 +12,17 @@ show_tile: false
 
       <h2>Current Opportunities</h2>
 
+			<!-- Category Filters -->
+		<ul class="actions filters" id="opp-filters">
+		<li><a href="#" class="button special" data-filter="all">All</a></li>
+		<li><a href="#" class="button" data-filter="staff-role">Staff Role</a></li>
+		<li><a href="#" class="button" data-filter="mission-internship">Mission Internship</a></li>
+		<li><a href="#" class="button" data-filter="church-planting-residency">Church Planting Residency</a></li>
+		<li><a href="#" class="button" data-filter="short-term-trip">Short-term Trip</a></li>
+		<li><a href="#" class="button" data-filter="medium-term-placement">Medium-term Placement</a></li>
+		<li><a href="#" class="button" data-filter="long-term-placement">Long-term Placement</a></li>
+		</ul>
+
       <div id="opps">
         {% for opp in site.opportunities %}
           {% if opp.publish %}
