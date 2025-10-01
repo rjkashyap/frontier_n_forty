@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+  Forty by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <!-- Main -->
+    <div id="main" class="alt">
+
+      <!-- One -->
+      <section id="one">
+        <div class="inner">
+          <header class="major">
+            <h1>{{ page.title }}</h1>
+          </header>
+
+          {%- comment -%} Prefer Google Drive image via drive_id; fall back to page.image {%- endcomment -%}
+          {% if page.drive_id %}
+            <span class="image main">
+              <img src="https://lh3.googleusercontent.com/d/{{ page.drive_id }}=w1600"
+                   alt="{{ page.title | escape }}" />
+            </span>
+          {% elsif page.image %}
+            <span class="image main">
+              <img src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title | escape }}" />
+            </span>
+          {% endif %}
+
+          {%- comment -%} Optional meta line (location / dates / duration) {%- endcomment -%}
+          {% assign has_dates = page.start_date or page.finish_date %}
+          {% if page.location or has_dates or page.duration %}
+            <p class="meta">
+              {% if page.location %}📍 {{ page.location }}{% endif %}
+              {% if page.location and (has_dates or page.duration) %} &nbsp;•&nbsp; {% endif %}
+              {% if page.start_date %}{{ page.start_date | date: "%b %d, %Y" }}{% endif %}
+              {% if page.finish_date %} → {{ page.finish_date | date: "%b %d, %Y" }}{% endif %}
+              {% if page.duration %}{% if has_dates or page.location %} &nbsp;•&nbsp; {% endif %}{{ page.duration }}{% endif %}
+            </p>
+          {% endif %}
+
+          {%- comment -%} Show description prominently if present {%- endcomment -%}
+          {% if page.description %}
+            <p><strong>{{ page.description }}</strong></p>
+          {% endif %}
+
+          {{ content }}
+
+          {%- comment -%} Built-in Apply Now button (white button style via theme) {%- endcomment -%}
+          {% if page.tally_id or page.apply_now %}
+            <ul class="actions">
+              <li>
+                {% if page.tally_id %}
+                  <a href="#tally-open={{ page.tally_id }}&tally-overlay=1"
+                     class="button"
+                     role="button">Apply Now</a>
+                {% else %}
+                  <a href="{{ page.apply_now }}"
+                     class="button"
+                     target="_blank" rel="noopener"
+                     role="button">Apply Now</a>
+                {% endif %}
+              </li>
+            </ul>
+          {% endif %}
+        </div>
+      </section>
+
+    </div>
+
+    {% include footer.html %}
+
+    {%- comment -%} Tally popup script (only when tally_id is present) {%- endcomment -%}
+    {% if page.tally_id %}
+      <script async src="https://tally.so/widgets/embed.js"></script>
+    {% endif %}
+
+  </body>
+
+</html>
