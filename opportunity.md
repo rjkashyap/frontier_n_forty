@@ -112,14 +112,15 @@ show_tile: false
     padding: 1rem;
     box-shadow: none;
 
-    /* Fade animation for filter show/hide */
+    /* Lazy fade animation */
     opacity: 1;
     transform: translateY(0);
-    transition: opacity .18s ease, transform .18s ease;
+    transition: opacity .38s ease-in-out, transform .38s ease-in-out;
+    will-change: opacity, transform;
   }
   #opps .opp.is-hidden {
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(10px);
   }
 
   /* Image — square corners, natural aspect */
@@ -165,35 +166,43 @@ show_tile: false
 
     const btns  = bar.querySelectorAll('[data-filter]');
     const cards = Array.from(document.querySelectorAll('#opps .opp'));
-    const DURATION = 200; // ms, matches CSS ~ .18s
 
-    function hideCard(card) {
+    const DURATION = 380; // ms — match CSS (.38s)
+    const STAGGER  = 35;  // ms between cards for a mild cascade
+
+    function hideCard(card, i) {
       if (card.dataset.hidden === '1') return;
-      card.dataset.hidden = '1';
-      card.classList.add('is-hidden');
-      setTimeout(() => { card.style.display = 'none'; }, DURATION);
+      setTimeout(() => {
+        card.dataset.hidden = '1';
+        card.classList.add('is-hidden');
+        setTimeout(() => { card.style.display = 'none'; }, DURATION);
+      }, i * STAGGER);
     }
 
-    function showCard(card) {
+    function showCard(card, i) {
       if (card.dataset.hidden !== '1') return;
-      card.style.display = '';
-      void card.offsetWidth; // force reflow to allow transition
-      card.classList.remove('is-hidden');
-      delete card.dataset.hidden;
+      setTimeout(() => {
+        card.style.display = '';
+        void card.offsetWidth; // reflow to trigger transition
+        card.classList.remove('is-hidden');
+        delete card.dataset.hidden;
+      }, i * STAGGER);
     }
 
     function applyFilter(slug) {
-      cards.forEach(card => {
-        const cat = card.getAttribute('data-cat-slug');
-        const show = (slug === 'all' || cat === slug);
-        if (show) showCard(card);
-        else hideCard(card);
+      const toShow = [];
+      const toHide = [];
+      cards.forEach(c => {
+        const cat = c.getAttribute('data-cat-slug');
+        ((slug === 'all' || cat === slug) ? toShow : toHide).push(c);
       });
+      toHide.forEach((c, i) => hideCard(c, i));
+      toShow.forEach((c, i) => showCard(c, i));
     }
 
     function setActive(targetBtn) {
       btns.forEach(b => b.classList.remove('special'));
-      targetBtn.classList.add('special'); // theme’s highlighted button
+      targetBtn.classList.add('special');
     }
 
     btns.forEach(btn => {
@@ -206,11 +215,10 @@ show_tile: false
       });
     });
 
-    // Initial state from URL hash (e.g., /opportunity#short-term-trip)
+    // Initial state from URL hash (no animation on first paint)
     const initialSlug = (location.hash || '#all').slice(1);
     const initBtn = bar.querySelector(`[data-filter="${initialSlug}"]`) || btns[0];
 
-    // Set initial visibility instantly (no animation on first paint)
     cards.forEach(card => {
       const cat = card.getAttribute('data-cat-slug');
       const visible = (initialSlug === 'all' || cat === initialSlug);
