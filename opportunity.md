@@ -20,7 +20,13 @@ show_tile: false
             <div class="opp">
 
 				{% if opp.drive_id %}
-				<img src="https://lh3.googleusercontent.com/d/{{ opp.drive_id }}=w1600" alt="{{ opp.title | escape }}">
+				<img
+					src="https://lh3.googleusercontent.com/d/{{ opp.drive_id }}=w1600"
+					data-drive-id="{{ opp.drive_id }}"
+					data-placeholder="{{ 'assets/images/opportunities/placeholder.png' | relative_url }}"
+					alt="{{ opp.title | escape }}"
+					onerror="driveImgFallback(this)"
+				>
 				{% endif %}
 
               <h3>{{ opp.title }}</h3>
