@@ -19,9 +19,9 @@ show_tile: false
           {% if opp.publish %}
             <div class="opp">
 
-              {% if opp.drive_id %}
-                <img src="https://drive.google.com/thumbnail?id={{ opp.drive_id }}" alt="{{ opp.title | escape }}">
-              {% endif %}
+				{% if opp.drive_id %}
+				<img src="https://lh3.googleusercontent.com/d/{{ opp.drive_id }}=w1600" alt="{{ opp.title | escape }}">
+				{% endif %}
 
               <h3>{{ opp.title }}</h3>
               <p>{{ opp.excerpt }}</p>
@@ -136,4 +136,27 @@ show_tile: false
   }
   .button.fit { width: 100%; }
 </style>
+
+<script>
+  function driveHiRes(id){ return `https://lh3.googleusercontent.com/d/${id}=w1600`; }
+  function driveView(id){  return `https://drive.google.com/uc?export=view&id=${id}`; }
+  function driveThumb(id){ return `https://drive.google.com/thumbnail?id=${id}&sz=w1200`; }
+
+  function driveImgFallback(img){
+    const id = img.dataset.driveId;
+    const state = img.dataset.state || "hires";
+    if(!id) return;
+
+    if(state === "hires"){
+      img.dataset.state = "view";
+      img.src = driveView(id);
+    } else if(state === "view"){
+      img.dataset.state = "thumb";
+      img.src = driveThumb(id);
+    } else {
+      img.onerror = null; // stop loops
+      img.src = img.dataset.placeholder || "{{ '/images/opportunities/placeholder.jpg' | relative_url }}";
+    }
+  }
+</script>
 
