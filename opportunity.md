@@ -1,6 +1,8 @@
 ---
-layout: opportunity
+layout: page
 title: Opportunities
+description: Matthew 28:18-20
+image: assets/images/pic01.jpg
 permalink: /opportunity
 nav-menu: false
 show_tile: false
@@ -15,7 +17,11 @@ show_tile: false
       <div id="opps">
         {% for opp in site.opportunities %}
           {% if opp.publish %}
-            {% assign blurb = opp.excerpt | default: opp.description | default: opp.content | strip_html | truncate: 220 %}
+            {% assign blurb = opp.excerpt
+                              | default: opp.summary
+                              | default: opp.content
+                              | strip_html
+                              | truncate: 220 %}
 
             <div class="opp">
 
@@ -83,12 +89,12 @@ show_tile: false
 
   /* Card — square corners to match theme */
   #opps .opp {
-    background: #161a22;                          /* dark card background */
+    background: #161a22;
     color: #e6e9ef;
     border: 1px solid rgba(230,233,239,0.10);
-    border-radius: 0;                              /* no rounded corners */
+    border-radius: 0;
     padding: 1rem;
-    box-shadow: none;                              /* align with theme */
+    box-shadow: none;
   }
 
   /* Image — square corners, natural aspect */
@@ -96,7 +102,7 @@ show_tile: false
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 0;                              /* no rounded corners */
+    border-radius: 0;
     margin-bottom: 0.5rem;
   }
 
@@ -124,5 +130,5 @@ show_tile: false
   /* Buttons: use theme defaults (white buttons, square corners) via .button */
 </style>
 
-<!-- Tally popup script (needed if you use tally_id) -->
+<!-- Tally popup script (only needed if using tally_id links) -->
 <script async src="https://tally.so/widgets/embed.js"></script>
