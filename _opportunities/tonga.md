@@ -1,6 +1,6 @@
 ---
 title: "Short-term Mission Trip to Fiji"
-category: "Short-term Trip"
+category: "Mission Internship"
 location: "Tonga"
 start_date: 2025-07-01
 finish_date: 2025-07-14
