@@ -101,8 +101,7 @@ show_tile: false
 
   #opps .opp img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+    height: auto;        /* no crop, natural aspect ratio */
     display: block;
     border-radius: 8px;
     margin-bottom: 0.5rem;
@@ -117,7 +116,7 @@ show_tile: false
   #opps .opp .location {
     margin: 0 0 0.5rem;
     color: var(--fg-light);
-    font-weight: 600;   /* a touch of emphasis */
+    font-weight: 600;
   }
 
   #opps .opp .excerpt {
