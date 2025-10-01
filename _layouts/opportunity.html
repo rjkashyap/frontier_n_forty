@@ -47,9 +47,9 @@
           {% endif %}
 
           {%- comment -%} Show description prominently if present {%- endcomment -%}
-          {% if page.description %}
-            <p><strong>{{ page.description }}</strong></p>
-          {% endif %}
+			{% if page.summary %}
+			<p><strong>{{ page.summary }}</strong></p>
+			{% endif %}
 
           {{ content }}
 
