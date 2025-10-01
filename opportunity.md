@@ -45,24 +45,24 @@ show_tile: false
                 </p>
               {% endif %}
 
-					{% if opp.tally_id %}
-					<ul class="actions">
-						<li>
-						<a href="#tally-open={{ opp.tally_id }}&tally-overlay=1"
-							class="button"
-							role="button">Apply Now</a>
-						</li>
-					</ul>
-					{% elsif opp.apply_now %}
-					<ul class="actions">
-						<li>
-						<a href="{{ opp.apply_now }}"
-							class="button"
-							target="_blank" rel="noopener"
-							role="button">Apply Now</a>
-						</li>
-					</ul>
-					{% endif %}
+				{% if opp.tally_id %}
+				<ul class="actions">
+					<li>
+					<a href="#tally-open={{ opp.tally_id }}&tally-overlay=1"
+						class="button"
+						role="button">Apply Now</a>
+					</li>
+				</ul>
+				{% elsif opp.apply_now %}
+				<ul class="actions">
+					<li>
+					<a href="{{ opp.apply_now }}"
+						class="button"
+						target="_blank" rel="noopener"
+						role="button">Apply Now</a>
+					</li>
+				</ul>
+				{% endif %}
 
             </div>
           {% endif %}
