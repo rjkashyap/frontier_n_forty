@@ -60,7 +60,7 @@ show_tile: false
                 <ul class="actions">
                   <li>
                     <a href="{{ opp.apply_now }}"
-                       class="button"
+                       class="button special"
                        target="_blank" rel="noopener"
                        role="button">Apply Now</a>
                   </li>
