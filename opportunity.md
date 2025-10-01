@@ -90,7 +90,7 @@ show_tile: false
 
     </div>
 
-<p><a href="#" onclick="openOppModal(this);return false;" data-title="Test Modal" data-summary="If you see this, the modal works.">Open test modal</a></p>
+
 
   </section>
 </div>
