@@ -159,6 +159,61 @@ show_tile: false
   background: rgba(255,255,255,0.04);
 }
 
+/* ===== Modal base ===== */
+.modal { 
+  position: fixed; 
+  inset: 0; 
+  display: none; 
+  z-index: 1000; 
+}
+.modal.is-open { display: block; }
+
+/* Backdrop */
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+}
+
+/* Dialog */
+.modal__dialog {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 6vh auto;
+  background: #161a22; /* matches your card bg */
+  color: #e6e9ef;
+  border: 1px solid rgba(230,233,239,0.10);
+  padding: 1.25rem;
+  border-radius: 0;     /* square corners to match theme */
+}
+
+/* Close (X) */
+.modal__close {
+  position: absolute;
+  top: .5rem;
+  right: .75rem;
+  background: transparent;
+  border: 0;
+  font-size: 1.5rem;
+  color: #e6e9ef;
+  cursor: pointer;
+}
+
+/* Image inside modal */
+.modal__image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: .75rem;
+}
+
+/* Meta + summary */
+#opp-modal .meta {
+  color: rgba(230,233,239,0.68);
+  margin: .25rem 0 .75rem;
+}
+
 </style>
 
 <!-- Tally popup script (only needed if using tally_id links) -->
