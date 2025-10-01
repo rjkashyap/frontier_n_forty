@@ -79,22 +79,35 @@
 	@import 'layout/wrapper';
 	@import 'layout/menu';
 
-/* Logo sizing + padding */
+/* --- Header height & logo spacing overrides --- */
+#header {
+  /* increase overall header height so logo fits */
+  min-height: 76px;            /* tweak 72–88px to taste */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;      /* keep padding inside height */
+}
+
 #header .logo {
   display: inline-block;
-  padding: 6px 0;     /* top/bottom breathing room */
-  line-height: 0;     /* remove extra vertical space */
+  padding: 6px 0;              /* visible top/bottom breathing room */
+  line-height: 0;              /* remove extra inline spacing */
 }
 
 #header .logo img {
   display: block;
-  max-height: 48px;   /* was 36px — bump up the size */
-  width: auto;        /* keep aspect ratio */
+  max-height: 52px;            /* bigger logo */
+  width: auto;                 /* preserve aspect ratio */
 }
 
-/* Optional: slightly smaller on narrow screens */
+/* Mobile adjustments */
 @media (max-width: 768px) {
+  #header {
+    min-height: 68px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
   #header .logo img {
-    max-height: 42px;
+    max-height: 46px;
   }
 }
