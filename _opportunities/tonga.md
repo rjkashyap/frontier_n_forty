@@ -1,11 +1,11 @@
 ---
 title: "Short-term Mission Trip to Fiji"
 category: "Short-term Trip"
-location: "Suva, Fiji"
+location: "Tonga"
 start_date: 2025-07-01
 finish_date: 2025-07-14
 duration: "2 weeks"
-drive_id: "1qeSug8EpSk6J4uW5hLOVpM_HP2Hp9K4p"  # <-- just the ID
+drive_id: "1b7rJ6O5jcrvRn2kDmBe_5N9sXK7N9WB0"  # <-- just the ID
 tally_id: nr7QJL
 publish: true
 ---

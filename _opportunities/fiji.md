@@ -5,9 +5,10 @@ location: "Suva, Fiji"
 start_date: 2025-07-01
 finish_date: 2025-07-14
 duration: "2 weeks"
-drive_id: "1b7rJ6O5jcrvRn2kDmBe_5N9sXK7N9WB0"  # <-- just the ID
+drive_id: "1b7rJ6O5jcrvRn2kDmBe_5N9sXK7N9WB0"
 tally_id: nr7QJL
 publish: true
+description: "Join us in Suva for two weeks of outreach and training. Serve communities and grow in mission skills."
 ---
 
 {% if page.image %}<img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" style="max-width:100%;height:auto;display:block;margin-bottom:1rem;border-radius:6px;">{% endif %}

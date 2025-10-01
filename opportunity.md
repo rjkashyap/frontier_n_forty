@@ -18,13 +18,13 @@ show_tile: false
         {% for opp in site.opportunities %}
           {% if opp.publish %}
             {% assign blurb = opp.excerpt | default: opp.description | default: opp.content | strip_html | truncate: 220 %}
+
             <div class="opp">
 
               {% if opp.drive_id %}
                 <img
                   src="https://lh3.googleusercontent.com/d/{{ opp.drive_id }}=w1600"
-                  alt="{{ opp.title | escape }}"
-                >
+                  alt="{{ opp.title | escape }}">
               {% endif %}
 
               <h3>{{ opp.title }}</h3>
@@ -85,12 +85,12 @@ show_tile: false
 
   /* Card — square corners to match theme */
   #opps .opp {
-    background: #161a22;
+    background: #161a22;                          /* dark card background */
     color: #e6e9ef;
     border: 1px solid rgba(230,233,239,0.10);
-    border-radius: 0;
+    border-radius: 0;                              /* no rounded corners */
     padding: 1rem;
-    box-shadow: none;
+    box-shadow: none;                              /* align with theme */
   }
 
   /* Image — square corners, natural aspect */
@@ -98,7 +98,7 @@ show_tile: false
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 0;
+    border-radius: 0;                              /* no rounded corners */
     margin-bottom: 0.5rem;
   }
 
@@ -123,7 +123,7 @@ show_tile: false
     font-size: 0.95rem;
   }
 
-  /* Buttons: use theme defaults (white light buttons, square corners) */
+  /* Buttons: use theme defaults (white buttons, square corners) via .button */
 </style>
 
 <!-- Tally popup script (needed if you use tally_id) -->
