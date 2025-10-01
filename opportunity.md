@@ -46,3 +46,17 @@ show_tile: false
 
 
 </div>
+
+<style>
+  #opps .opp img {
+    max-width: 100%;   /* image won’t overflow */
+    height: auto;      /* keeps correct proportions */
+    display: block;    /* removes any extra inline gaps */
+    margin-bottom: 0.5rem; /* tiny spacing under image */
+    border-radius: 6px; /* optional rounded corners */
+  }
+
+  #opps .opp {
+    margin-bottom: 2rem; /* spacing between items */
+  }
+</style>
