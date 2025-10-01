@@ -79,35 +79,49 @@
 	@import 'layout/wrapper';
 	@import 'layout/menu';
 
-/* --- Header height & logo spacing overrides --- */
+/* --- Header height, spacing, and logo sizing (Forty theme override) --- */
 #header {
-  /* increase overall header height so logo fits */
-  min-height: 76px;            /* tweak 72–88px to taste */
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /* Increase overall header height so the logo fits comfortably */
+  min-height: 84px;            /* tweak 72–92px to taste */
+  padding-top: 12px;
+  padding-bottom: 12px;
   box-sizing: border-box;      /* keep padding inside height */
 }
 
+/* Logo link */
 #header .logo {
   display: inline-block;
-  padding: 6px 0;              /* visible top/bottom breathing room */
   line-height: 0;              /* remove extra inline spacing */
+  padding: 6px 0;              /* vertical breathing room around the image */
+  margin-left: 20px;           /* left spacing for the logo */
 }
 
+/* Logo image */
 #header .logo img {
   display: block;
-  max-height: 52px;            /* bigger logo */
-  width: auto;                 /* preserve aspect ratio */
+  max-height: 56px;            /* logo size (adjust 48–60px to taste) */
+  width: auto;                 /* keep aspect ratio */
 }
+
+/* Optional: nudge the Menu link away from the logo if needed */
+/*
+#header nav {
+  margin-left: 12px;
+}
+*/
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
   #header {
-    min-height: 68px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    min-height: 72px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #header .logo {
+    margin-left: 14px;         /* slightly tighter on mobile */
+    padding: 5px 0;
   }
   #header .logo img {
-    max-height: 46px;
+    max-height: 48px;
   }
 }
