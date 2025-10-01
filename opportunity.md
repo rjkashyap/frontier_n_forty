@@ -3,7 +3,7 @@ layout: page
 title: Opportunities
 description: Matthew 28:18-20
 image: assets/images/pic01.jpg
-permalink: /opportunities/
+permalink: /opportunity
 nav-menu: false
 show_tile: false
 ---
