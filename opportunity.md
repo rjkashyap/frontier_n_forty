@@ -7,96 +7,108 @@ nav-menu: false
 show_tile: false
 ---
 
-<div id="main" class="alt">
+---
+layout: page
+title: Opportunities
+permalink: /opportunities/
+---
 
-        <section id="ten">
-            <div class="inner">
-					<header class="major">
-						<h2>NO PLACE LEFT - Multiplying Movements in New Zealand?</h2>
-					</header>
-				
-				
-					<div class="row">
-							<div class="6u 12u$(small)">
-								<h3>Meet a Movements Catalyst</h3>
-											<span class="image fit"><img src="{% link assets/images/cities.png %}" alt="" /></span>
-									<a href="https://collections.humanitix.com/allevents" class="button  fit">REGISTER</a>
-							</div>
+			<h2>Current Opportunities</h2>
 
-							<div class="6u$ 12u$(small)">
-								<h3>Mission Week and Movement Leadership Training</h3>
-												<span class="image fit"><img src="{% link assets/images/akl.png %}" alt="" /></span>
-										<a href="https://events.humanitix.com/npl" class="button  fit">REGISTER</a>
-							</div>
-					
-					</div>   
-					
-        	</div>
+			<div class="opportunities-grid">
+			{%- comment -%}
+			Sort newest Start Date first; fall back to title if no date
+			{%- endcomment -%}
+			{%- assign items = site.opportunities | sort: "start_date" | reverse -%}
 
-			<br>
+			{%- for opp in items -%}
+				{%- if opp.publish -%}
+				{%- assign img = opp.image | default: "/images/opportunities/placeholder.jpg" -%}
+				<article class="card">
+					<div class="card-media">
+					<img src="{{ img | relative_url }}" alt="{{ opp.title | escape }}">
+					{%- if opp.category -%}
+						<span class="badge">{{ opp.category }}</span>
+					{%- endif -%}
+					</div>
 
-			<div class="inner">
-					<header class="major">
-						<h2>NO PLACE LEFT - Overseas Mission Trips</h2>
-					</header>
-				
-				
-					<div class="row">
+					<div class="card-body">
+					<h3 class="card-title">{{ opp.title }}</h3>
+					<p class="muted">
+						{%- if opp.location -%}{{ opp.location }}{%- endif -%}
+						{%- if opp.duration and opp.location -%} • {%- endif -%}
+						{%- if opp.duration -%}{{ opp.duration }}{%- endif -%}
+					</p>
 
+					{%- if opp.start_date or opp.finish_date -%}
+						<p class="muted">
+						{%- if opp.start_date -%}{{ opp.start_date | date: "%b %d, %Y" }}{%- endif -%}
+						{%- if opp.finish_date -%} → {{ opp.finish_date | date: "%b %d, %Y" }}{%- endif -%}
+						</p>
+					{%- endif -%}
 
-											<span class="image fit"><img src="{% link assets/images/cities.png %}" alt="" /></span>
-									<a href="#tally-open=nr7QJL&tally-align-left=1&tally-overlay=1&tally-emoji-text=✈️&tally-emoji-animation=tada" class="button  fit">REGISTER</a>
+					<div class="summary">
+						{{ opp.excerpt | default: opp.content | markdownify }}
+					</div>
 
-					
-					</div>   
+					{%- comment -%}
+					Prefer Tally popup via tally_id; otherwise fall back to apply_now URL.
+					{%- endcomment -%}
+					{%- if opp.tally_id -%}
+						<a
+						href="#tally-open={{ opp.tally_id }}&tally-overlay=1"
+						class="button primary fit"
+						role="button"
+						>Apply Now</a>
+					{%- elsif opp.apply_now -%}
+						<a
+						href="{{ opp.apply_now }}"
+						class="button primary fit"
+						target="_blank" rel="noopener"
+						>Apply Now</a>
+					{%- endif -%}
+					</div>
+				</article>
+				{%- endif -%}
+			{%- endfor -%}
+			</div>
 
+			<!-- Tally popup (once on the page if you use tally_id) -->
+			<script async src="https://tally.so/widgets/embed.js"></script>
 
-					<div class="row">
-
-
-
-						<!-- Responsive Airtable Embed -->
-						<style>
-						.airtable-embed-wrap {
-							position: relative;
-							width: 100%;
-							padding-top: 75%; /* aspect ratio – adjust as needed */
-							border: 1px solid #ccc;
-							border-radius: 8px;
-							overflow: hidden;
-						}
-						.airtable-embed-wrap iframe {
-							position: absolute;
-							top: 0; left: 0;
-							width: 100%;
-							height: 100%;
-							border: 0;
-							background: transparent;
-						}
-						</style>
-
-						<div class="airtable-embed-wrap">
-						<iframe 
-							class="airtable-embed"
-							src="https://airtable.com/embed/app4Leug1Bu4XL58D/shrCB6Vd9fbQWKbX7?viewControls=on"
-							frameborder="0"
-							loading="lazy"
-							referrerpolicy="no-referrer"
-							title="Airtable Opportunities"
-						></iframe>
-						</div>
-
-					
-					</div>   
-					
-        	</div>
-
-
-
-		 
-
-				
-
-        </section>
-
-</div>
+			<style>
+			.opportunities-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+				gap: 1.25rem;
+				margin-top: 1.5rem;
+			}
+			.card {
+				display: flex; flex-direction: column;
+				background: #fff; border: 1px solid #ddd; border-radius: 12px;
+				overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.06);
+			}
+			.card-media { position: relative; }
+			.card-media img {
+				width: 100%; height: 200px; object-fit: cover; display: block;
+			}
+			.badge {
+				position: absolute; left: 12px; top: 12px;
+				background: #111; color: #fff; font-size: .75rem; padding: .25rem .5rem;
+				border-radius: 999px;
+			}
+			.card-body { padding: 1rem; }
+			.card-title { margin: 0 0 .25rem; font-size: 1.1rem; }
+			.muted { color: #666; margin: 0 0 .25rem; }
+			.summary p { margin-top: .5rem; }
+			.button {
+				display: inline-block; margin-top: .75rem; padding: .6rem 1rem;
+				border-radius: 8px; text-decoration: none; font-weight: 600;
+				background: #16a34a; color: #fff; text-align: center;
+			}
+			.button:hover { filter: brightness(.95); }
+			.fit { width: 100%; }
+			@media (max-width: 480px){
+				.card-media img { height: 180px; }
+			}
+			</style>
