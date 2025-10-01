@@ -1,4 +1,5 @@
 ---
+layout: opportunity
 title: "Short-term Mission Trip to Fiji"
 category: "Short-term Trip"
 location: "Suva, Fiji"
