@@ -216,5 +216,98 @@ show_tile: false
 
 </style>
 
+<script>
+  // Format YYYY-MM-DD to "MMM DD, YYYY"
+  function fmtDate(d) {
+    if (!d) return "";
+    try { return new Date(d).toLocaleDateString(undefined, { year:'numeric', month:'short', day:'2-digit' }); }
+    catch(e){ return d; }
+  }
+
+  const modal = document.getElementById('opp-modal');
+  const img   = document.getElementById('opp-modal-img');
+  const title = document.getElementById('opp-modal-title');
+  const meta  = document.getElementById('opp-modal-meta');
+  const sum   = document.getElementById('opp-modal-summary');
+  const acts  = document.getElementById('opp-modal-actions');
+
+  function openModalFrom(el){
+    const d = el.dataset;
+
+    // Title
+    title.textContent = d.title || '';
+
+    // Meta line
+    const parts = [];
+    if (d.location) parts.push('📍 ' + d.location);
+
+    const dates =
+      (d.start ? fmtDate(d.start) : '') +
+      (d.finish ? ' → ' + fmtDate(d.finish) : '');
+
+    const hasDates = !!(d.start || d.finish);
+    const duration = d.duration || '';
+
+    const mid = [dates, (hasDates && duration ? ' • ' : '') + duration].join('').trim();
+    meta.textContent = [parts.join(''), (parts.length && mid ? ' • ' : '') + mid].join('');
+
+    // Summary
+    sum.textContent = d.summary || '';
+
+    // Image
+    if (d.drive) {
+      img.src = `https://lh3.googleusercontent.com/d/${d.drive}=w1600`;
+      img.style.display = '';
+    } else {
+      img.removeAttribute('src');
+      img.style.display = 'none';
+    }
+
+    // Actions (Apply)
+    acts.innerHTML = '';
+    if (d.tally) {
+      const li = document.createElement('li');
+      const a  = document.createElement('a');
+      a.className = 'button';
+      a.textContent = 'Apply Now';
+      a.href = `#tally-open=${d.tally}&tally-overlay=1`;
+      li.appendChild(a);
+      acts.appendChild(li);
+    }
+
+    // Show modal
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeModal(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  // Delegated clicks
+  document.addEventListener('click', (e) => {
+    const openEl = e.target.closest('.js-open-opp');
+    if (openEl) {
+      e.preventDefault();
+      openModalFrom(openEl);
+      return;
+    }
+    const closeEl = e.target.closest('.js-close-opp');
+    if (closeEl || e.target === document.querySelector('#opp-modal .modal__backdrop')) {
+      e.preventDefault();
+      closeModal();
+    }
+  });
+
+  // ESC to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+</script>
+
+<!-- Tally popup script (needed for #tally-open links) -->
+<script async src="https://tally.so/widgets/embed.js"></script>
+
 <!-- Tally popup script (only needed if using tally_id links) -->
 <script async src="https://tally.so/widgets/embed.js"></script>
