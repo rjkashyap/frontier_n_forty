@@ -78,3 +78,13 @@
 	@import 'layout/footer';
 	@import 'layout/wrapper';
 	@import 'layout/menu';
+
+	/* Logo sizing */
+#header .logo img {
+  display: block;
+  max-height: 36px; /* adjust 32–40px if needed */
+  width: auto;      /* keep aspect ratio */
+}
+#header .logo {
+  line-height: 0;   /* remove extra vertical space */
+}
