@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: opportunity
 title: Opportunities
 description: Matthew 28:18-20
 image: assets/images/pic01.jpg
