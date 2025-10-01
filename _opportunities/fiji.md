@@ -10,14 +10,19 @@ tally_id: nr7QJL
 publish: true
 ---
 
-{% if page.drive_id %}
+{% if page.image %}
+  <!-- Use your existing direct image path/URL -->
   <img
-    src="https://lh3.googleusercontent.com/d/{{ page.drive_id }}=w1600"
-    data-drive-id="{{ page.drive_id }}"
-    data-placeholder="{{ '/images/opportunities/placeholder.jpg' | relative_url }}"
+    src="{{ page.image | relative_url }}"
     alt="{{ page.title | escape }}"
     style="max-width:100%;height:auto;display:block;margin-bottom:1rem;border-radius:6px;"
-    onerror="driveImgFallback(this)"
+  >
+{% elsif page.drive_id %}
+  <!-- Fallback to Google Drive thumbnail (higher size for better quality) -->
+  <img
+    src="https://drive.google.com/thumbnail?id={{ page.drive_id }}&sz=w1200"
+    alt="{{ page.title | escape }}"
+    style="max-width:100%;height:auto;display:block;margin-bottom:1rem;border-radius:6px;"
   >
 {% endif %}
 
