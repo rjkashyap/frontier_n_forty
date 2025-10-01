@@ -115,12 +115,13 @@ show_tile: false
     /* Lazy fade animation */
     opacity: 1;
     transform: translateY(0);
-    transition: opacity .38s ease-in-out, transform .38s ease-in-out;
+    transition: opacity .42s ease-in-out, transform .42s ease-in-out;
     will-change: opacity, transform;
   }
   #opps .opp.is-hidden {
     opacity: 0;
     transform: translateY(10px);
+    pointer-events: none; /* prevent hover/click during fade */
   }
 
   /* Image — square corners, natural aspect */
@@ -167,26 +168,34 @@ show_tile: false
     const btns  = bar.querySelectorAll('[data-filter]');
     const cards = Array.from(document.querySelectorAll('#opps .opp'));
 
-    const DURATION = 380; // ms — match CSS (.38s)
-    const STAGGER  = 35;  // ms between cards for a mild cascade
+    const DURATION = 420; // ms — a touch slower on appearance
+    const STAGGER  = 55;  // ms per card for a softer cascade
 
     function hideCard(card, i) {
       if (card.dataset.hidden === '1') return;
+      // stagger via transition-delay for smoother sequencing
+      card.style.transitionDelay = (i * STAGGER) + 'ms';
+      card.classList.add('is-hidden');              // fade/slide out
+      // remove from layout after transition completes
       setTimeout(() => {
+        card.style.display = 'none';
         card.dataset.hidden = '1';
-        card.classList.add('is-hidden');
-        setTimeout(() => { card.style.display = 'none'; }, DURATION);
-      }, i * STAGGER);
+        card.style.transitionDelay = '0ms';
+      }, DURATION + i * STAGGER + 10);
     }
 
     function showCard(card, i) {
       if (card.dataset.hidden !== '1') return;
+      // ensure we start from hidden visual state, then animate in
+      card.classList.add('is-hidden');              // start hidden (opacity 0)
+      card.style.display = '';                      // put back into layout
+      void card.offsetWidth;                        // reflow so transition can run
+      card.style.transitionDelay = (i * STAGGER) + 'ms';
+      card.classList.remove('is-hidden');           // animate to visible
       setTimeout(() => {
-        card.style.display = '';
-        void card.offsetWidth; // reflow to trigger transition
-        card.classList.remove('is-hidden');
-        delete card.dataset.hidden;
-      }, i * STAGGER);
+        card.dataset.hidden = '0';
+        card.style.transitionDelay = '0ms';
+      }, DURATION + i * STAGGER + 10);
     }
 
     function applyFilter(slug) {
@@ -196,6 +205,7 @@ show_tile: false
         const cat = c.getAttribute('data-cat-slug');
         ((slug === 'all' || cat === slug) ? toShow : toHide).push(c);
       });
+      // hide first, then show (both with gentle stagger)
       toHide.forEach((c, i) => hideCard(c, i));
       toShow.forEach((c, i) => showCard(c, i));
     }
@@ -226,6 +236,8 @@ show_tile: false
         card.classList.add('is-hidden');
         card.style.display = 'none';
         card.dataset.hidden = '1';
+      } else {
+        card.dataset.hidden = '0';
       }
     });
 
