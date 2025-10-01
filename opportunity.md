@@ -1,5 +1,3 @@
-Nice palette! I’ll wire your button to use it (no other design changes). I’ll define CSS vars from your colors and set the primary button background to your highlight/accent1 #7aa2ff, with accessible white text and a subtle hover.
-
 ---
 layout: page
 title: Opportunities
@@ -108,8 +106,3 @@ show_tile: false
   }
   .button.fit { width: 100%; }
 </style>
-
-<!-- Tally popup script (needed if you use tally_id) -->
-<script async src="https://tally.so/widgets/embed.js"></script>
-
-If you’d rather use a different accent (e.g., --accent6: #34d399 for a green button), just change --btn-bg to var(--accent6) and optionally tweak the hover --btn-bg-h.
