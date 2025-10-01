@@ -17,6 +17,7 @@ show_tile: false
       <div id="opps">
         {% for opp in site.opportunities %}
           {% if opp.publish %}
+            {% assign blurb = opp.excerpt | default: opp.description | default: opp.content | strip_html | truncate: 220 %}
             <div class="opp">
 
               {% if opp.drive_id %}
@@ -32,8 +33,8 @@ show_tile: false
                 <p class="location">📍 {{ opp.location }}</p>
               {% endif %}
 
-              {% if opp.excerpt %}
-                <p class="excerpt">{{ opp.excerpt }}</p>
+              {% if blurb %}
+                <p class="excerpt">{{ blurb }}</p>
               {% endif %}
 
               {% assign has_dates = opp.start_date or opp.finish_date %}
@@ -49,7 +50,7 @@ show_tile: false
                 <ul class="actions">
                   <li>
                     <a href="#tally-open={{ opp.tally_id }}&tally-overlay=1"
-                       class="button special"
+                       class="button"
                        role="button">Apply Now</a>
                   </li>
                 </ul>
@@ -82,14 +83,14 @@ show_tile: false
     margin-top: 1rem;
   }
 
-  /* Card — square corners, theme-friendly */
+  /* Card — square corners to match theme */
   #opps .opp {
-    background: #161a22;              /* keep your dark card bg; adjust if needed */
+    background: #161a22;
     color: #e6e9ef;
     border: 1px solid rgba(230,233,239,0.10);
-    border-radius: 0;                  /* no rounded corners */
+    border-radius: 0;
     padding: 1rem;
-    box-shadow: none;                  /* remove custom shadow to match theme */
+    box-shadow: none;
   }
 
   /* Image — square corners, natural aspect */
@@ -97,7 +98,7 @@ show_tile: false
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 0;                  /* no rounded corners */
+    border-radius: 0;
     margin-bottom: 0.5rem;
   }
 
@@ -122,8 +123,7 @@ show_tile: false
     font-size: 0.95rem;
   }
 
-  /* Buttons: use theme defaults (white light buttons) */
-  /* No custom .button styles here so the theme's square style takes over */
+  /* Buttons: use theme defaults (white light buttons, square corners) */
 </style>
 
 <!-- Tally popup script (needed if you use tally_id) -->
