@@ -1,5 +1,5 @@
 ---
-layout: opportunity
+layout: page
 title: Opportunities
 permalink: /opportunity
 nav-menu: false
@@ -70,7 +70,7 @@ show_tile: false
                 <ul class="actions">
                   <li>
                     <a href="#tally-open={{ opp.tally_id }}&tally-overlay=1"
-                       class="button special"
+                       class="button"
                        role="button">Apply Now</a>
                   </li>
                 </ul>
@@ -78,12 +78,13 @@ show_tile: false
                 <ul class="actions">
                   <li>
                     <a href="{{ opp.apply_now }}"
-                       class="button special"
+                       class="button"
                        target="_blank" rel="noopener"
                        role="button">Apply Now</a>
                   </li>
                 </ul>
               {% endif %}
+
             </div>
           {% endif %}
         {% endfor %}
@@ -110,9 +111,18 @@ show_tile: false
     border-radius: 0;
     padding: 1rem;
     box-shadow: none;
+
+    /* Fade animation for filter show/hide */
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .18s ease, transform .18s ease;
+  }
+  #opps .opp.is-hidden {
+    opacity: 0;
+    transform: translateY(6px);
   }
 
-  /* Image */
+  /* Image — square corners, natural aspect */
   #opps .opp img {
     width: 100%;
     height: auto;
@@ -142,14 +152,10 @@ show_tile: false
     font-size: 0.95rem;
   }
 
-  /* Add spacing between filter buttons */
-  #opp-filters li {
-    margin: 0.25rem 0.5rem 0.25rem 0;
-  }
-  #opp-filters .button {
-    min-width: 10rem;
-    text-align: center;
-  }
+  /* Filter toolbar spacing */
+  #opp-filters { margin: .25rem 0 1rem; }
+  #opp-filters li { margin: 0.25rem 0.5rem 0.25rem 0; }
+  #opp-filters .button { min-width: 10rem; text-align: center; }
 </style>
 
 <script>
@@ -158,18 +164,36 @@ show_tile: false
     if (!bar) return;
 
     const btns  = bar.querySelectorAll('[data-filter]');
-    const cards = document.querySelectorAll('#opps .opp');
+    const cards = Array.from(document.querySelectorAll('#opps .opp'));
+    const DURATION = 200; // ms, matches CSS ~ .18s
+
+    function hideCard(card) {
+      if (card.dataset.hidden === '1') return;
+      card.dataset.hidden = '1';
+      card.classList.add('is-hidden');
+      setTimeout(() => { card.style.display = 'none'; }, DURATION);
+    }
+
+    function showCard(card) {
+      if (card.dataset.hidden !== '1') return;
+      card.style.display = '';
+      void card.offsetWidth; // force reflow to allow transition
+      card.classList.remove('is-hidden');
+      delete card.dataset.hidden;
+    }
 
     function applyFilter(slug) {
       cards.forEach(card => {
         const cat = card.getAttribute('data-cat-slug');
-        card.style.display = (slug === 'all' || cat === slug) ? '' : 'none';
+        const show = (slug === 'all' || cat === slug);
+        if (show) showCard(card);
+        else hideCard(card);
       });
     }
 
     function setActive(targetBtn) {
       btns.forEach(b => b.classList.remove('special'));
-      targetBtn.classList.add('special');
+      targetBtn.classList.add('special'); // theme’s highlighted button
     }
 
     btns.forEach(btn => {
@@ -182,11 +206,24 @@ show_tile: false
       });
     });
 
+    // Initial state from URL hash (e.g., /opportunity#short-term-trip)
     const initialSlug = (location.hash || '#all').slice(1);
     const initBtn = bar.querySelector(`[data-filter="${initialSlug}"]`) || btns[0];
+
+    // Set initial visibility instantly (no animation on first paint)
+    cards.forEach(card => {
+      const cat = card.getAttribute('data-cat-slug');
+      const visible = (initialSlug === 'all' || cat === initialSlug);
+      if (!visible) {
+        card.classList.add('is-hidden');
+        card.style.display = 'none';
+        card.dataset.hidden = '1';
+      }
+    });
+
     setActive(initBtn);
-    applyFilter(initBtn.getAttribute('data-filter'));
   })();
 </script>
 
+<!-- Tally popup script (needed for #tally-open links) -->
 <script async src="https://tally.so/widgets/embed.js"></script>
