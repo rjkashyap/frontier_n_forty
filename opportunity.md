@@ -15,27 +15,27 @@ show_tile: false
 
 
 
+
 				<h2>Current Opportunities</h2>
 
-				<ul>
+				<div id="opps">
 				{% for opp in site.opportunities %}
 					{% if opp.publish %}
-					<li>
+					<div class="opp">
 						<h3>{{ opp.title }}</h3>
 						<p>{{ opp.excerpt }}</p>
-						
+
 						{% if opp.tally_id %}
 						<a href="#tally-open={{ opp.tally_id }}&tally-overlay=1">Apply Now</a>
 						{% elsif opp.apply_now %}
 						<a href="{{ opp.apply_now }}" target="_blank" rel="noopener">Apply Now</a>
 						{% endif %}
-					</li>
+					</div>
 					{% endif %}
 				{% endfor %}
-				</ul>
+				</div>
 
-				<!-- Tally script (only needed if you use tally_id) -->
-				<script async src="https://tally.so/widgets/embed.js"></script>	
+
 
 
 
