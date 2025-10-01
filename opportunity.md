@@ -23,11 +23,24 @@ show_tile: false
 
             <div class="opp">
 
-              {% if opp.drive_id %}
-                <img
-                  src="https://lh3.googleusercontent.com/d/{{ opp.drive_id }}=w1600"
-                  alt="{{ opp.title | escape }}">
-              {% endif %}
+				{% if opp.drive_id %}
+				<a href="#"
+					class="js-open-opp"
+					aria-label="View details for {{ opp.title | escape }}"
+					onclick="openOppModal(this);return false;"
+					data-title="{{ opp.title | escape }}"
+					data-location="{{ opp.location | escape }}"
+					data-start="{{ opp.start_date }}"
+					data-finish="{{ opp.finish_date }}"
+					data-duration="{{ opp.duration | escape }}"
+					data-summary="{{ opp.summary | default: opp.excerpt | default: opp.content | strip_html | escape }}"
+					data-drive="{{ opp.drive_id | escape }}"
+					data-tally="{{ opp.tally_id | escape }}">
+					<img
+					src="https://lh3.googleusercontent.com/d/{{ opp.drive_id }}=w1600"
+					alt="{{ opp.title | escape }}">
+				</a>
+				{% endif %}
 
               <h3>{{ opp.title }}</h3>
 
