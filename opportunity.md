@@ -43,10 +43,12 @@ show_tile: false
                data-desc="Multi-year missionary roles for those sensing a long-term call to cross-cultural ministry.">Long-term Placement</a></li>
       </ul>
 
-      <!-- Dynamic Category Description -->
-      <p id="opp-category-desc" class="category-desc">
-        Browse all current opportunities across Frontier Nations. Use the filters to narrow by type.
-      </p>
+      <!-- Category Description Box -->
+      <div class="category-box">
+        <p id="opp-category-desc" class="category-desc">
+          Browse all current opportunities across Frontier Nations. Use the filters to narrow by type.
+        </p>
+      </div>
 
       <!-- Opportunities Grid -->
       <div id="opps">
@@ -130,9 +132,9 @@ show_tile: false
 
   /* Card — square corners to match theme */
   #opps .opp {
-    background: #161a22;
-    color: #e6e9ef;
-    border: 1px solid rgba(230,233,239,0.10);
+    background: #161a22;                 /* bg-alt */
+    color: #e6e9ef;                      /* fg */
+    border: 1px solid rgba(230,233,239,0.10); /* border */
     border-radius: 0;
     padding: 1rem;
     box-shadow: none;
@@ -162,11 +164,11 @@ show_tile: false
   #opps .opp h3 {
     margin: 0.25rem 0 0.25rem;
     line-height: 1.25;
-    color: #ffffff;
+    color: #ffffff;                      /* fg-bold */
   }
   #opps .opp .location {
     margin: 0 0 0.5rem;
-    color: rgba(230,233,239,0.68);
+    color: rgba(230,233,239,0.68);       /* fg-light */
     font-weight: 600;
   }
   #opps .opp .excerpt {
@@ -180,13 +182,19 @@ show_tile: false
   }
 
   /* Filter toolbar spacing */
-  #opp-filters { margin: .25rem 0 .5rem; }
+  #opp-filters { margin: .25rem 0 .75rem; }
   #opp-filters li { margin: 0.25rem 0.5rem 0.25rem 0; }
   #opp-filters .button { min-width: 10rem; text-align: center; }
 
-  /* Category description styling */
-  .category-desc {
+  /* Category Description Box */
+  .category-box {
+    background: #0f1115;                 /* bg */
+    border: 1px solid rgba(230,233,239,0.10);
+    padding: 1rem 1.25rem;
     margin: 0 0 1.25rem;
+  }
+  .category-desc {
+    margin: 0;
     color: rgba(230,233,239,0.85);
     line-height: 1.5;
   }
@@ -197,8 +205,8 @@ show_tile: false
     const bar   = document.getElementById('opp-filters');
     if (!bar) return;
 
-    const btns  = bar.querySelectorAll('[data-filter]');
-    const cards = Array.from(document.querySelectorAll('#opps .opp'));
+    const btns   = bar.querySelectorAll('[data-filter]');
+    const cards  = Array.from(document.querySelectorAll('#opps .opp'));
     const descEl = document.getElementById('opp-category-desc');
 
     const DURATION = 420; // ms
@@ -242,6 +250,7 @@ show_tile: false
     function setActive(targetBtn) {
       btns.forEach(b => b.classList.remove('special'));
       targetBtn.classList.add('special');
+
       // Update description from the button's data-desc
       const text = targetBtn.getAttribute('data-desc') || '';
       if (descEl) descEl.textContent = text;
