@@ -48,3 +48,8 @@ exclude:
 collections:
   opportunities:
     output: true   # so each opportunity can have its own page if needed
+
+# parallel collection for Google Sheets / Data-driven approach
+collections:
+  opportunities_data:
+    output: true
