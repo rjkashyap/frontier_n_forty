@@ -49,5 +49,3 @@ collections:
   opportunities:
     output: true   # so each opportunity can have its own page if needed
 
-plugins:
-  - jekyll-airtable-gen
